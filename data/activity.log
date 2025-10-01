@@ -625,3 +625,6 @@
 {"timestamp": "2025-10-01T07:50:25.497547", "message": "Scheduler service starting...", "level": "info"}
 {"timestamp": "2025-10-01T07:50:25.497897", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
 {"timestamp": "2025-10-01T07:50:25.499507", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-01T10:48:54.186257", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-01T10:48:54.186750", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-01T10:48:54.188810", "message": "Scheduler started", "level": "info"}

@@ -42,6 +42,179 @@
         .progress-bar {
             transition: width 0.3s ease;
         }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+
+        body.dark-mode .bg-white {
+            background-color: #2d3748 !important;
+        }
+
+        body.dark-mode .text-gray-800 {
+            color: #e2e8f0 !important;
+        }
+
+        body.dark-mode .text-gray-700 {
+            color: #cbd5e0 !important;
+        }
+
+        body.dark-mode .text-gray-600 {
+            color: #a0aec0 !important;
+        }
+
+        body.dark-mode .text-gray-500 {
+            color: #718096 !important;
+        }
+
+        body.dark-mode .bg-gray-50 {
+            background-color: #1a202c !important;
+        }
+
+        body.dark-mode .bg-gray-100 {
+            background-color: #2d3748 !important;
+        }
+
+        body.dark-mode .border-gray-200 {
+            border-color: #4a5568 !important;
+        }
+
+        body.dark-mode .border-gray-300 {
+            border-color: #4a5568 !important;
+        }
+
+        body.dark-mode .divide-gray-200 > * {
+            border-color: #4a5568 !important;
+        }
+
+        body.dark-mode input {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            border-color: #4a5568;
+        }
+
+        body.dark-mode .hover\:bg-gray-50:hover {
+            background-color: #374151 !important;
+        }
+
+        /* Dark mode button improvements - more vibrant colors */
+        body.dark-mode .bg-green-300 {
+            background-color: #48bb78 !important;
+            color: #1a202c !important;
+        }
+
+        body.dark-mode .bg-green-300:hover,
+        body.dark-mode .hover\:bg-green-400:hover {
+            background-color: #38a169 !important;
+        }
+
+        body.dark-mode .bg-yellow-300 {
+            background-color: #ecc94b !important;
+            color: #1a202c !important;
+        }
+
+        body.dark-mode .bg-yellow-300:hover,
+        body.dark-mode .hover\:bg-yellow-400:hover {
+            background-color: #d69e2e !important;
+        }
+
+        body.dark-mode .bg-red-300 {
+            background-color: #fc8181 !important;
+            color: #1a202c !important;
+        }
+
+        body.dark-mode .bg-red-300:hover,
+        body.dark-mode .hover\:bg-red-400:hover {
+            background-color: #f56565 !important;
+        }
+
+        body.dark-mode .bg-blue-300 {
+            background-color: #63b3ed !important;
+            color: #1a202c !important;
+        }
+
+        body.dark-mode .bg-blue-300:hover,
+        body.dark-mode .hover\:bg-blue-400:hover {
+            background-color: #4299e1 !important;
+        }
+
+        body.dark-mode .bg-indigo-300 {
+            background-color: #7c3aed !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .bg-indigo-300:hover,
+        body.dark-mode .hover\:bg-indigo-400:hover {
+            background-color: #6d28d9 !important;
+        }
+
+        body.dark-mode .bg-purple-300 {
+            background-color: #b794f4 !important;
+            color: #1a202c !important;
+        }
+
+        body.dark-mode .bg-purple-300:hover,
+        body.dark-mode .hover\:bg-purple-400:hover {
+            background-color: #9f7aea !important;
+        }
+
+        body.dark-mode .bg-gray-300 {
+            background-color: #4a5568 !important;
+            color: #e2e8f0 !important;
+        }
+
+        body.dark-mode .bg-gray-300:hover,
+        body.dark-mode .hover\:bg-gray-400:hover {
+            background-color: #2d3748 !important;
+        }
+
+        /* Dark mode toggle switch */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #cbd5e0;
+            transition: 0.3s;
+            border-radius: 24px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: #4a5568;
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -50,9 +223,18 @@
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <div class="flex justify-between items-center">
                 <h1 class="text-3xl font-bold text-gray-800">Exchange Scraper</h1>
-                <button onclick="refreshAll()" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg">
-                    ⚙ Refresh
-                </button>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm text-gray-600">🌙</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <button onclick="refreshAll()" class="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-lg">
+                        ⚙ Refresh
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -90,56 +272,53 @@
             </div>
         </div>
 
-        <!-- Schedule and Quick Actions - Compact Layout -->
+        <!-- Quick Actions and Schedule - Compact Layout -->
         <div class="bg-white rounded-lg shadow-md p-4 mb-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- Schedule -->
-                <div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-3">Schedule</h3>
-                    <div class="mb-2">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Run Every:</label>
-                        <div class="flex items-center gap-2">
-                            <input type="number" id="intervalDays" min="1" max="365" step="1" value="7"
-                                   class="border border-gray-300 rounded px-2 py-1 w-16 text-sm"
-                                   onfocus="window.intervalDaysEditing = true"
-                                   onblur="window.intervalDaysEditing = false">
-                            <span class="text-sm">days</span>
-                        </div>
-                    </div>
-                    <div class="mb-2">
-                        <label class="block text-xs text-gray-600">Next Run:</label>
-                        <div class="text-sm font-semibold text-gray-800" id="nextRun">-</div>
-                    </div>
-                    <button onclick="saveSchedule()"
-                            class="w-full bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold py-1.5 px-3 rounded">
-                        Save
+            <!-- Quick Actions -->
+            <div class="mb-4">
+                <h3 class="text-lg font-bold text-gray-800 mb-3">Quick Actions</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                    <button onclick="controlAction('run')"
+                            class="bg-green-300 hover:bg-green-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        ▶ Run Now
+                    </button>
+                    <button onclick="controlAction('pause')"
+                            class="bg-yellow-300 hover:bg-yellow-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        ⏸ Pause
+                    </button>
+                    <button onclick="controlAction('stop')"
+                            class="bg-red-300 hover:bg-red-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        ⏹ Stop
+                    </button>
+                    <button onclick="showFilesModal()"
+                            class="bg-indigo-300 hover:bg-indigo-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        📊 View Data
+                    </button>
+                    <button onclick="showNotificationsModal()"
+                            class="bg-purple-300 hover:bg-purple-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        🔔 Notifications
                     </button>
                 </div>
+            </div>
 
-                <!-- Quick Actions -->
-                <div class="md:col-span-2">
-                    <h3 class="text-lg font-bold text-gray-800 mb-3">Quick Actions</h3>
-                    <div class="grid grid-cols-2 gap-2">
-                        <button onclick="controlAction('run')"
-                                class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold py-2 px-3 rounded">
-                            ▶ Run Now
+            <!-- Schedule -->
+            <div class="border-t border-gray-200 pt-3">
+                <div class="flex flex-wrap items-center gap-3 text-sm">
+                    <label class="font-medium text-gray-700">Run Every:</label>
+                    <div class="flex items-center gap-2">
+                        <input type="number" id="intervalDays" min="1" max="365" step="1" value="7"
+                               class="border border-gray-300 rounded px-2 py-1 w-16 text-sm"
+                               onfocus="window.intervalDaysEditing = true"
+                               onblur="window.intervalDaysEditing = false">
+                        <span>days</span>
+                        <button onclick="saveSchedule()"
+                                class="bg-blue-300 hover:bg-blue-400 text-gray-800 text-sm font-semibold py-1.5 px-4 rounded">
+                            Save
                         </button>
-                        <button onclick="controlAction('pause')"
-                                class="bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold py-2 px-3 rounded">
-                            ⏸ Pause
-                        </button>
-                        <button onclick="controlAction('stop')"
-                                class="bg-red-500 hover:bg-red-600 text-white text-sm font-semibold py-2 px-3 rounded">
-                            ⏹ Stop
-                        </button>
-                        <button onclick="showFilesModal()"
-                                class="bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold py-2 px-3 rounded">
-                            📊 View Data
-                        </button>
-                        <button onclick="showNotificationsModal()"
-                                class="bg-purple-500 hover:bg-purple-600 text-white text-sm font-semibold py-2 px-3 rounded">
-                            🔔 Notifications
-                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 ml-auto">
+                        <span class="text-gray-600">Next Run:</span>
+                        <span class="font-semibold text-gray-800" id="nextRun">-</span>
                     </div>
                 </div>
             </div>
@@ -150,7 +329,7 @@
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-xl font-bold text-gray-800">Live Activity Log</h2>
                 <button onclick="clearLogs()"
-                        class="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded text-sm">
+                        class="px-3 py-1 bg-gray-300 hover:bg-gray-400 rounded text-sm">
                     Clear
                 </button>
             </div>
@@ -251,7 +430,7 @@
                 </div>
             </div>
 
-            <button onclick="saveNotifications()" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+            <button onclick="saveNotifications()" class="w-full bg-blue-300 hover:bg-blue-400 text-gray-800 font-semibold py-2 px-4 rounded">
                 Save Notifications
             </button>
         </div>
@@ -260,6 +439,29 @@
     <script>
         const API_BASE = '/api';
         let autoRefreshInterval;
+
+        // Dark mode functions
+        function toggleDarkMode() {
+            const isDarkMode = document.getElementById('darkModeToggle').checked;
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        function loadDarkMode() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'enabled') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('darkModeToggle').checked = true;
+            }
+        }
+
+        // Load dark mode preference on page load
+        loadDarkMode();
 
         // Start auto-refresh
         function startAutoRefresh() {
@@ -476,7 +678,7 @@
                                 <div class="text-sm text-gray-500">${size} • ${date}</div>
                             </div>
                             <a href="${file.url}" download
-                               class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm">
+                               class="px-4 py-2 bg-blue-300 hover:bg-blue-400 text-gray-800 rounded-lg text-sm">
                                 Download
                             </a>
                         </div>

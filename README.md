@@ -41,7 +41,7 @@ A containerized application that scrapes the Inductive Automation Ignition Excha
 3. **Access the dashboard**:
    Open your browser and navigate to:
    ```
-   http://localhost:8080
+   http://localhost:9089
    ```
 
 4. **Stop the application**:
@@ -75,7 +75,7 @@ A containerized application that scrapes the Inductive Automation Ignition Excha
 The application consists of two Docker services:
 
 ### 1. Web Service
-- **Port**: 8080
+- **Port**: 9089
 - **Purpose**: Serves the web dashboard and provides REST API
 - **Endpoints**:
   - `GET /` - Web dashboard
@@ -92,7 +92,7 @@ The application consists of two Docker services:
 ### 2. Scheduler Service
 - **Purpose**: Runs scraper jobs on schedule
 - **Features**:
-  - Configurable interval (default: 24 hours)
+  - Configurable interval (default: 7 days)
   - Monitors control signals from web service
   - Updates state for real-time dashboard updates
   - Performs comparison and generates Excel reports
@@ -112,6 +112,10 @@ All data is stored in the `./data` directory, which is mounted as a Docker volum
 
 ### Dashboard Overview
 
+The web dashboard features a modern interface with:
+- **Pastel color scheme**: Easy-on-the-eyes button colors throughout
+- **Dark mode**: Toggle between light and dark themes using the moon icon switch in the header (preference saved locally)
+
 #### Current Status
 - Real-time scraper status (Idle, Running, Paused, Stopped, Done, Failed)
 - Progress bar with item count and percentage
@@ -119,7 +123,7 @@ All data is stored in the `./data` directory, which is mounted as a Docker volum
 - Elapsed and estimated remaining time
 
 #### Schedule Configuration
-- Set scraping interval in hours
+- Set scraping interval in days
 - View next scheduled run time
 - Save changes to apply immediately
 
@@ -170,14 +174,14 @@ A resource is considered "updated" if:
 ### Changing Scrape Interval
 
 **Via Dashboard**:
-1. Enter desired hours in "Run Every" field
+1. Enter desired days in "Run Every" field
 2. Click "Save"
 
 **Via API**:
 ```bash
-curl -X POST http://localhost:8080/api/config \
+curl -X POST http://localhost:9089/api/config \
   -H "Content-Type: application/json" \
-  -d '{"interval_hours": 12}'
+  -d '{"interval_days": 7}'
 ```
 
 ### Manual Scrape Trigger
@@ -186,7 +190,7 @@ curl -X POST http://localhost:8080/api/config \
 
 **Via API**:
 ```bash
-curl -X POST http://localhost:8080/api/control/run
+curl -X POST http://localhost:9089/api/control/run
 ```
 
 ## Development
@@ -239,7 +243,7 @@ python exchange_scraper_fixed.py
 
 1. Check web service status: `docker compose ps`
 2. Check web service logs: `docker compose logs web`
-3. Verify port 8080 is not in use: `lsof -i :8080` (macOS/Linux)
+3. Verify port 9089 is not in use: `lsof -i :9089` (macOS/Linux)
 
 ### Reports Not Generating
 
