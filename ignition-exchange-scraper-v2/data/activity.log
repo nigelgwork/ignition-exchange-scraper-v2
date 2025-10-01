@@ -1,0 +1,627 @@
+{"timestamp": "2025-10-01T05:27:12.849297", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-01T05:27:12.849546", "message": "Configuration: interval=24h, enabled=True", "level": "info"}
+{"timestamp": "2025-10-01T05:27:12.851625", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-01T05:29:16.191085", "message": "Manual run triggered", "level": "info"}
+{"timestamp": "2025-10-01T05:29:16.884732", "message": "Manual run requested", "level": "info"}
+{"timestamp": "2025-10-01T05:29:16.886010", "message": "Starting scraper job...", "level": "info"}
+{"timestamp": "2025-10-01T05:29:16.886391", "message": "Scraping Exchange resources...", "level": "info"}
+{"timestamp": "2025-10-01T05:29:16.886557", "message": "Starting full Exchange scrape...", "level": "info"}
+{"timestamp": "2025-10-01T05:29:27.481358", "message": "Checking for modal popups...", "level": "info"}
+{"timestamp": "2025-10-01T05:29:27.504486", "message": "  Found modal button: button:has-text('Accept')", "level": "info"}
+{"timestamp": "2025-10-01T05:29:29.546322", "message": "Loading all resources by clicking 'Load more'...", "level": "info"}
+{"timestamp": "2025-10-01T05:29:29.582200", "message": "  Clicking Load more... (attempt 1, current resources: 17)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:33.170448", "message": "    Loaded 12 new resources (total: 29)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:33.202568", "message": "  Clicking Load more... (attempt 2, current resources: 29)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:36.787633", "message": "    Loaded 12 new resources (total: 41)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:36.825789", "message": "  Clicking Load more... (attempt 3, current resources: 41)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:40.423133", "message": "    Loaded 12 new resources (total: 53)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:40.460843", "message": "  Clicking Load more... (attempt 4, current resources: 53)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:44.058497", "message": "    Loaded 12 new resources (total: 65)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:44.098071", "message": "  Clicking Load more... (attempt 5, current resources: 65)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:47.694046", "message": "    Loaded 12 new resources (total: 77)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:47.755457", "message": "  Clicking Load more... (attempt 6, current resources: 77)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:51.350893", "message": "    Loaded 12 new resources (total: 89)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:51.402531", "message": "  Clicking Load more... (attempt 7, current resources: 89)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:55.001024", "message": "    Loaded 12 new resources (total: 101)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:55.048610", "message": "  Clicking Load more... (attempt 8, current resources: 101)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:58.655169", "message": "    Loaded 12 new resources (total: 113)", "level": "info"}
+{"timestamp": "2025-10-01T05:29:58.708705", "message": "  Clicking Load more... (attempt 9, current resources: 113)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:02.329004", "message": "    Loaded 12 new resources (total: 125)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:02.391275", "message": "  Clicking Load more... (attempt 10, current resources: 125)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:06.015517", "message": "    Loaded 12 new resources (total: 137)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:06.071235", "message": "  Clicking Load more... (attempt 11, current resources: 137)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:09.683228", "message": "    Loaded 12 new resources (total: 149)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:09.742835", "message": "  Clicking Load more... (attempt 12, current resources: 149)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:13.371177", "message": "    Loaded 12 new resources (total: 161)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:13.431640", "message": "  Clicking Load more... (attempt 13, current resources: 161)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:17.063678", "message": "    Loaded 12 new resources (total: 173)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:17.140269", "message": "  Clicking Load more... (attempt 14, current resources: 173)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:20.773267", "message": "    Loaded 12 new resources (total: 185)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:20.847470", "message": "  Clicking Load more... (attempt 15, current resources: 185)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:24.482192", "message": "    Loaded 12 new resources (total: 197)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:24.575931", "message": "  Clicking Load more... (attempt 16, current resources: 197)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:28.219804", "message": "    Loaded 12 new resources (total: 209)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:28.306708", "message": "  Clicking Load more... (attempt 17, current resources: 209)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:31.967010", "message": "    Loaded 12 new resources (total: 221)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:32.060906", "message": "  Clicking Load more... (attempt 18, current resources: 221)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:35.731537", "message": "    Loaded 12 new resources (total: 233)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:35.821615", "message": "  Clicking Load more... (attempt 19, current resources: 233)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:39.491466", "message": "    Loaded 12 new resources (total: 245)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:39.582640", "message": "  Clicking Load more... (attempt 20, current resources: 245)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:43.242500", "message": "    Loaded 12 new resources (total: 257)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:43.333793", "message": "  Clicking Load more... (attempt 21, current resources: 257)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:47.021997", "message": "    Loaded 12 new resources (total: 269)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:47.117394", "message": "  Clicking Load more... (attempt 22, current resources: 269)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:50.773380", "message": "    Loaded 12 new resources (total: 281)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:50.869551", "message": "  Clicking Load more... (attempt 23, current resources: 281)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:54.544438", "message": "    Loaded 12 new resources (total: 293)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:54.650243", "message": "  Clicking Load more... (attempt 24, current resources: 293)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:58.333367", "message": "    Loaded 12 new resources (total: 305)", "level": "info"}
+{"timestamp": "2025-10-01T05:30:58.431605", "message": "  Clicking Load more... (attempt 25, current resources: 305)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:02.115812", "message": "    Loaded 12 new resources (total: 317)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:02.216774", "message": "  Clicking Load more... (attempt 26, current resources: 317)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:05.906666", "message": "    Loaded 12 new resources (total: 329)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:06.035674", "message": "  Clicking Load more... (attempt 27, current resources: 329)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:09.730289", "message": "    Loaded 12 new resources (total: 341)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:09.847705", "message": "  Clicking Load more... (attempt 28, current resources: 341)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:13.562073", "message": "    Loaded 12 new resources (total: 353)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:13.677995", "message": "  Clicking Load more... (attempt 29, current resources: 353)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:17.433307", "message": "    Loaded 12 new resources (total: 365)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:17.577075", "message": "  Clicking Load more... (attempt 30, current resources: 365)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:21.312813", "message": "    Loaded 12 new resources (total: 377)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:21.463483", "message": "  Clicking Load more... (attempt 31, current resources: 377)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:25.240313", "message": "    Loaded 12 new resources (total: 389)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:25.380435", "message": "  Clicking Load more... (attempt 32, current resources: 389)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:29.113546", "message": "    Loaded 12 new resources (total: 401)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:31.296341", "message": "  Clicking Load more... (attempt 33, current resources: 401)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:35.054464", "message": "    Loaded 12 new resources (total: 413)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:37.230267", "message": "  Clicking Load more... (attempt 34, current resources: 413)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:41.017284", "message": "    Loaded 12 new resources (total: 425)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:43.163757", "message": "  Clicking Load more... (attempt 35, current resources: 425)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:46.949429", "message": "    Loaded 12 new resources (total: 437)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:49.097687", "message": "  Clicking Load more... (attempt 36, current resources: 437)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:52.887187", "message": "    Loaded 12 new resources (total: 449)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:55.069073", "message": "  Clicking Load more... (attempt 37, current resources: 449)", "level": "info"}
+{"timestamp": "2025-10-01T05:31:58.997864", "message": "    Loaded 12 new resources (total: 461)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:01.192705", "message": "  Clicking Load more... (attempt 38, current resources: 461)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:05.047608", "message": "    Loaded 12 new resources (total: 473)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:07.261752", "message": "  Clicking Load more... (attempt 39, current resources: 473)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:11.169157", "message": "    Loaded 12 new resources (total: 485)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:13.367493", "message": "  Clicking Load more... (attempt 40, current resources: 485)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:17.293243", "message": "    Loaded 12 new resources (total: 497)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:19.551396", "message": "  Clicking Load more... (attempt 41, current resources: 497)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:23.425067", "message": "    Loaded 12 new resources (total: 509)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:25.617483", "message": "  Clicking Load more... (attempt 42, current resources: 509)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:29.432242", "message": "    Loaded 1 new resources (total: 510)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:38.704339", "message": "Finished loading. Total resources found: 510", "level": "info"}
+{"timestamp": "2025-10-01T05:32:40.535718", "message": "Found 510 total resources to scrape", "level": "info"}
+{"timestamp": "2025-10-01T05:32:47.725650", "message": "\u2713 Scraped: Jandas (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:32:53.996374", "message": "\u2713 Scraped: Customizable, Autoscaling Gauges for Perspective (UDT included) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:33:00.627265", "message": "\u2713 Scraped: Ignition Backup Utility Using Perspective (v1.8.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:33:07.026028", "message": "\u2713 Scraped: Water Industry Pack (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:33:13.749213", "message": "\u2713 Scraped: Data Center Industry Pack (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:33:19.941914", "message": "\u2713 Scraped: ICC 2025: Flex Your Knowledge On Perspective Containers (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:33:26.683761", "message": "\u2713 Scraped: Perspective Siemens Library of Basic Controls (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:33:32.850096", "message": "\u2713 Scraped: Markdown Editor+ (v1.4.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:33:40.017150", "message": "\u2713 Scraped: Perspective Date Picker (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:33:46.163739", "message": "\u2713 Scraped: Responsive P&ID View Scaling (v1)", "level": "info"}
+{"timestamp": "2025-10-01T05:33:52.769972", "message": "\u2713 Scraped: Water/Wastewater Icons (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:33:58.862032", "message": "\u2713 Scraped: Perspective 3D (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:34:05.483466", "message": "\u2713 Scraped: Ethernet/IP Scanner for Factory Talk (v2)", "level": "info"}
+{"timestamp": "2025-10-01T05:34:11.631596", "message": "\u2713 Scraped: Dynamic Power Chart Web Dev (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:34:18.118498", "message": "\u2713 Scraped: Password Recovery (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:34:24.254670", "message": "\u2713 Scraped: AI-LLM Multi-Round Deliberation Council (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:34:30.739388", "message": "\u2713 Scraped: Google Nest OAuth2 (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:34:36.791622", "message": "\u2713 Scraped: Student Build-a-Thon 2025 (v1)", "level": "info"}
+{"timestamp": "2025-10-01T05:34:43.317972", "message": "\u2713 Scraped: Perspective Date Range Picker (v1.2.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:34:49.503379", "message": "\u2713 Scraped: Web Dev GET/POST (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:34:56.533369", "message": "\u2713 Scraped: Webinar Resources: Design Like a Pro - April 2025 (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:35:03.161247", "message": "\u2713 Scraped: Transaction Group Multi-Instance Generator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:35:09.810025", "message": "\u2713 Scraped: Perspective Public API Examples (Social Posts & Weather) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:35:16.111297", "message": "\u2713 Scraped: Flex Repeater Carousel (v1)", "level": "info"}
+{"timestamp": "2025-10-01T05:35:22.815552", "message": "\u2713 Scraped: User Preferences System (v1)", "level": "info"}
+{"timestamp": "2025-10-01T05:35:29.036136", "message": "\u2713 Scraped: Gantt Chart (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:35:35.836230", "message": "\u2713 Scraped: OEE Gauge (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:35:42.001239", "message": "\u2713 Scraped: Folsom Lake College Hack-A-Thon (v1)", "level": "info"}
+{"timestamp": "2025-10-01T05:35:48.621389", "message": "\u2713 Scraped: Connect Four Game (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:35:54.727458", "message": "\u2713 Scraped: SC Charts Boost (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:36:01.580633", "message": "\u2713 Scraped: Pikaview (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:36:20.168400", "message": "\u2713 Scraped: Data Center Public Demo (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:36:27.608806", "message": "\u2713 Scraped: ProveIt! Presentation Projects (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:36:33.659011", "message": "\u2713 Scraped: Custom Dynamic Tab Container (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:36:40.220904", "message": "\u2713 Scraped: Perspective OEE Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:36:46.288786", "message": "\u2713 Scraped: Wordle Game (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:36:52.779321", "message": "\u2713 Scraped: Tag Path Array Index Mapping (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:36:59.015955", "message": "\u2713 Scraped: UDT Instance Generator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:37:05.612097", "message": "\u2713 Scraped: Custom Color Palette (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:37:11.655952", "message": "\u2713 Scraped: Address Form View (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:37:18.177772", "message": "\u2713 Scraped: Animated 5094 I/O (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:37:24.271027", "message": "\u2713 Scraped: Prepared Food Lines Public Demo (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:37:30.983743", "message": "\u2713 Scraped: RFID Public Demo (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:37:37.091382", "message": "\u2713 Scraped: Oil & Gas Public Demo (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:37:43.770856", "message": "\u2713 Scraped: Automotive Public Demo (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:37:49.927338", "message": "\u2713 Scraped: Analog Indicator Setup (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:37:56.387736", "message": "\u2713 Scraped: CyberSciences SER Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:38:02.637891", "message": "\u2713 Scraped: Hilscher sensorEDGE Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:38:10.216385", "message": "\u2713 Scraped: VNC Portal (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:38:16.247793", "message": "\u2713 Scraped: CESMII SM Profile Converter (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:38:22.988065", "message": "\u2713 Scraped: Dark Mode for the Designer (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:38:29.097291", "message": "\u2713 Scraped: 2024 Build-a-Thon BIJC Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:38:35.615908", "message": "\u2713 Scraped: Starter Parentproject (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:38:41.703645", "message": "\u2713 Scraped: SC Charts - Basic Interaction Customization (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:38:48.233965", "message": "\u2713 Scraped: Perspective Game Die (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:38:54.280676", "message": "\u2713 Scraped: Rheonics Viscosity and Density Meter (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:39:00.999868", "message": "\u2713 Scraped: Perspective Numeric Entry / Number Pad (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:39:11.720213", "message": "\u2713 Scraped: Perspective SFC Execution Manager (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:39:20.843646", "message": "\u2713 Scraped: DMC - ICC 2024 Build-a-Thon (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:39:27.097046", "message": "\u2713 Scraped: Perspective Fast Multi-Select Dropdown (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:39:33.729195", "message": "\u2713 Scraped: CSS Dynamic Menu Tree (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:39:42.678512", "message": "\u2713 Scraped: Ignition Architecture Builder (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:39:49.334005", "message": "\u2713 Scraped: Flip Card Matching Game (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:39:55.625240", "message": "\u2713 Scraped: Perspective HTML5 Color Picker (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:40:02.472706", "message": "\u2713 Scraped: High Performance Alarm Summary (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:40:09.037316", "message": "\u2713 Scraped: Calendar Component (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:40:16.281052", "message": "\u2713 Scraped: Ignition Code Breaker (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:40:22.690213", "message": "\u2713 Scraped: Tag Report Utility (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:40:29.449683", "message": "\u2713 Scraped: Perspective Grid Flex Repeater (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:40:35.647345", "message": "\u2713 Scraped: Weather Widget iOS (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:40:42.267759", "message": "\u2713 Scraped: Timer UDT (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:40:48.593451", "message": "\u2713 Scraped: Send message to Lark (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:40:55.245704", "message": "\u2713 Scraped: Status Timeline Chart (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:41:01.386862", "message": "\u2713 Scraped: PDF Annotator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:41:08.024030", "message": "\u2713 Scraped: Maintenance Tracking Template (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:41:14.255965", "message": "\u2713 Scraped: MQTT Vanilla Transmission (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:41:20.881541", "message": "\u2713 Scraped: Multi Table Filter (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:41:27.025308", "message": "\u2713 Scraped: Siemens Library of Basic Process Perspective Faceplates (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:41:33.653516", "message": "\u2713 Scraped: Standalone Windows and Popups (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:41:39.834713", "message": "\u2713 Scraped: 1734 Animated IO (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:41:46.703759", "message": "\u2713 Scraped: Compact Logix 5069 Animated IO (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:41:52.866165", "message": "\u2713 Scraped: Spreadsheet Import Tool (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:41:59.593246", "message": "\u2713 Scraped: Dynamic Data Visualization with Ignition Reporting and Easy Charts (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:42:05.725903", "message": "\u2713 Scraped: Tag Search Tree (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:42:12.344739", "message": "\u2713 Scraped: Minute Rate of Change - Using Tag Historian & Gateway Event Script (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:42:18.526850", "message": "\u2713 Scraped: Publishing Example Gateway (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:42:25.088929", "message": "\u2713 Scraped: Cognex Vision Web Socket Demo (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:42:31.187131", "message": "\u2713 Scraped: Object Model Example (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:42:40.307909", "message": "\u2713 Scraped: Convert Siemens PLC Tags to JSON Format (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:42:46.428408", "message": "\u2713 Scraped: OPC UA Simulation Tag Mapper (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:42:52.876242", "message": "\u2713 Scraped: Sandalwood Tulip to Ignition API (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:42:59.019619", "message": "\u2713 Scraped: Excel Export/Import for OPC Path Change (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:43:05.689000", "message": "\u2713 Scraped: VerneACL (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:43:11.841870", "message": "\u2713 Scraped: Ignition + Cirrus Link IoT Bridge + Snowflake Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:43:18.395975", "message": "\u2713 Scraped: Opto22 groovManage API (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:43:24.855153", "message": "\u2713 Scraped: GPS Serial Sample Application (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:43:31.479153", "message": "\u2713 Scraped: Theme Tester for Components (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:43:38.353687", "message": "\u2713 Scraped: Bananas! (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:43:45.077827", "message": "\u2713 Scraped: CSS Responsive Grid Examples (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:43:51.231246", "message": "\u2713 Scraped: Simple Production Tracker/OEE Calculator (v1.2.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:43:57.812583", "message": "\u2713 Scraped: AlarmMessenger (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:44:04.171690", "message": "\u2713 Scraped: Animated Card View (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:44:11.801789", "message": "\u2713 Scraped: Water Treatment Public Demo (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:44:17.932276", "message": "\u2713 Scraped: SVG Moving Analog Indicator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:44:24.912336", "message": "\u2713 Scraped: Gateway Restart via GWCMD (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:44:31.625671", "message": "\u2713 Scraped: Find and Highlight Text (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:44:38.518189", "message": "\u2713 Scraped: groov RIO EMU Faceplates (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:44:44.854417", "message": "\u2713 Scraped: Vaporwave Theme (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:44:51.414677", "message": "\u2713 Scraped: Energy Storage SCADA (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:44:57.720862", "message": "\u2713 Scraped: Active Alarm Icon (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:45:05.003496", "message": "\u2713 Scraped: Auto Complete Entry Field - Perspective (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:45:11.619110", "message": "\u2713 Scraped: Excel WebDev Connectivity (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:45:18.413293", "message": "\u2713 Scraped: Cron Schedule Builder (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:45:25.350335", "message": "\u2713 Scraped: Pan Zoom Fly To Navigation (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:45:32.422714", "message": "\u2713 Scraped: Historical Tag Analysis (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:45:38.804212", "message": "\u2713 Scraped: CSS Expanding Cards (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:45:45.465542", "message": "\u2713 Scraped: Mettler Toledo Library (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:45:51.750862", "message": "\u2713 Scraped: Alarm Rationalization Tool (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:45:58.542055", "message": "\u2713 Scraped: Pareto Alarm Chart (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:46:04.871343", "message": "\u2713 Scraped: Perspective Table - Group and Reorder Rows (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:46:13.890507", "message": "\u2713 Scraped: Task Toggler - Time Tracking Application (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:46:20.133091", "message": "\u2713 Scraped: Vision Auto Logout (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:46:26.788937", "message": "\u2713 Scraped: CMMS (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:46:33.028823", "message": "\u2713 Scraped: Perspective Word Cloud (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:46:39.958244", "message": "\u2713 Scraped: MongoDB Examples (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:46:46.194134", "message": "\u2713 Scraped: Dynamic Report Template (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:46:52.905324", "message": "\u2713 Scraped: Tag Group Configuration Function(s) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:46:59.976155", "message": "\u2713 Scraped: Pan Zoom iFrame (With Touch Support) (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:47:06.721902", "message": "\u2713 Scraped: Database Copy Tool (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:47:12.913366", "message": "\u2713 Scraped: Perspective Screenshot (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:47:19.805024", "message": "\u2713 Scraped: CSV to Tag History - Perspective Version (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:47:26.191854", "message": "\u2713 Scraped: Multi Select Dropdown (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:47:32.775170", "message": "\u2713 Scraped: GraphQL Example (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:47:38.959199", "message": "\u2713 Scraped: Perspective Icon Manager (v10002)", "level": "info"}
+{"timestamp": "2025-10-01T05:47:45.783829", "message": "\u2713 Scraped: Simple Rectangle Chart (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:47:52.014165", "message": "\u2713 Scraped: VLC Media Player Interface (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:47:58.812331", "message": "\u2713 Scraped: Maze Builder - Search Algorithms (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:48:05.309952", "message": "\u2713 Scraped: Gateway Utilities Resources (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:48:12.157625", "message": "\u2713 Scraped: Material Icons Extended Library (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:48:18.762127", "message": "\u2713 Scraped: Animated Ignition Icons (Anicons) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:48:25.531037", "message": "\u2713 Scraped: Flow Software - 2023 Data Dash Solution (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:48:31.789568", "message": "\u2713 Scraped: Component Spotlight (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:48:38.602052", "message": "\u2713 Scraped: Data Dash 2023 - Color Booth (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:48:44.829081", "message": "\u2713 Scraped: Jupyter Kernel (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:48:51.525698", "message": "\u2713 Scraped: MQTT Image Loader (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:48:57.790876", "message": "\u2713 Scraped: Mitsubishi Tag Import Tool (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:49:04.625224", "message": "\u2713 Scraped: ICC Elevate 2023 - Axcend Robot Twin (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:49:11.020023", "message": "\u2713 Scraped: groov EPIC Learning Center CStore UDT and Templates (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:49:17.744918", "message": "\u2713 Scraped: Perspective View With Published Sparkplug B MQTT Data In The Cloud (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:49:23.945594", "message": "\u2713 Scraped: Data Dash 2023 - Mitsubishi VFD A700 (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:49:30.785467", "message": "\u2713 Scraped: Aliased Historical Tag Browser (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:49:36.994260", "message": "\u2713 Scraped: Simple Dashboard - Data Dash ICC 2023 (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:49:43.672116", "message": "\u2713 Scraped: Gateway-Driven Popup Windows (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:49:49.991399", "message": "\u2713 Scraped: Flexible Oil and Gas Templates (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:49:56.710429", "message": "\u2713 Scraped: Local AI Interface (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:50:02.958944", "message": "\u2713 Scraped: Data Dash 2023 - Simmons Foods (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:50:09.849231", "message": "\u2713 Scraped: Alarm Repeater (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:50:16.134893", "message": "\u2713 Scraped: Auxiliary Dictionary Functions (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:50:23.025375", "message": "\u2713 Scraped: Space X API Demo (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:50:29.256540", "message": "\u2713 Scraped: Machine Learning Project with Ignition and Flask (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:50:35.988813", "message": "\u2713 Scraped: Time Zone Selector (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:50:42.169908", "message": "\u2713 Scraped: MySQL Backup Utility Script (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:50:49.982990", "message": "\u2713 Scraped: London Underground Train Arrivals (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:50:56.289434", "message": "\u2713 Scraped: High Performance HMI Alarm Indicator Border Styles (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:51:03.231693", "message": "\u2713 Scraped: Chatbot - Vision Client (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:51:09.549706", "message": "\u2713 Scraped: Pan Zoom Frame (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:51:16.156280", "message": "\u2713 Scraped: Vision Project Navigation (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:51:22.308753", "message": "\u2713 Scraped: Dynamic Alarm UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:51:28.954684", "message": "\u2713 Scraped: Perspective PowerBall Numbers Generator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:51:35.080764", "message": "\u2713 Scraped: Flip Clock (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:51:41.633158", "message": "\u2713 Scraped: Pan and Zoom in Perspective (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:51:47.829658", "message": "\u2713 Scraped: Shelly1 MQTT UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:51:54.526449", "message": "\u2713 Scraped: CSS Animation Guide: A Robot Example (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:52:00.593410", "message": "\u2713 Scraped: Perspective Toast Notifications (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:52:07.269947", "message": "\u2713 Scraped: Perspective Copy to Clipboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:52:13.526572", "message": "\u2713 Scraped: Prosoft MCM Manager (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:52:20.143129", "message": "\u2713 Scraped: First Order Filter UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:52:26.290960", "message": "\u2713 Scraped: IO Home (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:52:33.010199", "message": "\u2713 Scraped: Modular Stack Light (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:52:39.264311", "message": "\u2713 Scraped: Theme Builder (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:52:45.956449", "message": "\u2713 Scraped: Configurable UDT for Array-Based PLC Tags (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:52:52.066704", "message": "\u2713 Scraped: History Logger UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:52:58.819546", "message": "\u2713 Scraped: Mongo DB Tag Log (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:53:05.240700", "message": "\u2713 Scraped: Mouse Hover Border (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:53:11.955777", "message": "\u2713 Scraped: Simple Perspective SVG Editor (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:53:18.243380", "message": "\u2713 Scraped: Perspective Electronic Signature Framework (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:53:24.897587", "message": "\u2713 Scraped: Bacnet Convert To Tags Present Value Only (v10000)", "level": "info"}
+{"timestamp": "2025-10-01T05:53:30.963968", "message": "\u2713 Scraped: Auto Complete Text Field (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:53:37.582749", "message": "\u2713 Scraped: Perspective Flip Card (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:53:44.008842", "message": "\u2713 Scraped: IEC 61850 Graphics (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:53:50.606850", "message": "\u2713 Scraped: ChatGPT + Ignition - Python Code Assistant (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:53:56.711681", "message": "\u2713 Scraped: Inventory Prediction Manager (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:54:03.381982", "message": "\u2713 Scraped: Dashboard Edge (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:54:09.517209", "message": "\u2713 Scraped: Searchable Dropdown (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:54:16.267629", "message": "\u2713 Scraped: Vision Popup Titlebar (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:54:23.001260", "message": "\u2713 Scraped: ChatIGN - ChatGPT in Ignition! (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:54:29.651488", "message": "\u2713 Scraped: Perspective Symbol Custom State Info (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:54:35.681871", "message": "\u2713 Scraped: Vision Navigation Framework (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:54:42.379718", "message": "\u2713 Scraped: SVG Simple Gauge Component (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:54:48.565586", "message": "\u2713 Scraped: EskomSePush Ignition Integration (v10002)", "level": "info"}
+{"timestamp": "2025-10-01T05:54:55.515030", "message": "\u2713 Scraped: Reports Tree Nav (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:55:01.785404", "message": "\u2713 Scraped: CSS Loading Animations (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:55:08.575752", "message": "\u2713 Scraped: Language Selector (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:55:14.816626", "message": "\u2713 Scraped: Perspective Gauge (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:55:21.567146", "message": "\u2713 Scraped: Delta MS300 VFD Template (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:55:27.753365", "message": "\u2713 Scraped: SVG Gauge Component (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:55:34.331552", "message": "\u2713 Scraped: Tag Security Editor for Vision (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:55:40.543256", "message": "\u2713 Scraped: Translations Manager (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:55:47.350042", "message": "\u2713 Scraped: Perspective Dynamic Grid (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:55:53.538454", "message": "\u2713 Scraped: Tag History Transfer Tool (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:56:00.174947", "message": "\u2713 Scraped: CSV Tag Write Tool (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:56:06.416958", "message": "\u2713 Scraped: IEC 61850 Scripting Demonstration (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:56:12.964366", "message": "\u2713 Scraped: Edge Ad Hoc Trends (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:56:19.173620", "message": "\u2713 Scraped: Comments (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:56:25.937002", "message": "\u2713 Scraped: Mobile Responsive UI (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:56:31.921383", "message": "\u2713 Scraped: Copy to Clipboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:56:38.421218", "message": "\u2713 Scraped: Audit Log Postgres Compatible (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:56:44.707419", "message": "\u2713 Scraped: Web Documents (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:56:52.485086", "message": "\u2713 Scraped: Recipe Controller and Storage (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:56:58.833283", "message": "\u2713 Scraped: Animated Rolling Ball Menu (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:57:05.453246", "message": "\u2713 Scraped: Heartbeat UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:57:11.584803", "message": "\u2713 Scraped: Useful SVGs (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:57:18.207910", "message": "\u2713 Scraped: System Monitor (with System Monitor UDT) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:57:24.310826", "message": "\u2713 Scraped: Perspective SVG Animation (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:57:30.875647", "message": "\u2713 Scraped: Setpoint Control via ON-OFF and PID (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:57:36.984066", "message": "\u2713 Scraped: GeoJSON Explorer (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:57:43.531168", "message": "\u2713 Scraped: High Performance Motor (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:57:49.540465", "message": "\u2713 Scraped: Dynamic Easy Chart (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:57:56.040865", "message": "\u2713 Scraped: De-Risk Your Digital Transformation Webinar UDT Models (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:58:02.101301", "message": "\u2713 Scraped: Active Alarm Indicator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:58:08.594695", "message": "\u2713 Scraped: Vision VFD Control/Operation (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:58:14.726535", "message": "\u2713 Scraped: SQUEAKS Integration for Ignition (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:58:22.060736", "message": "\u2713 Scraped: Alarm Summary UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:58:28.139580", "message": "\u2713 Scraped: Custom Trend Maker (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:58:34.807829", "message": "\u2713 Scraped: HOA Button (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:58:40.850543", "message": "\u2713 Scraped: Perspective Draggable Color Picker (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:58:47.372058", "message": "\u2713 Scraped: USGS Water Data Acquisition (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:58:53.830418", "message": "\u2713 Scraped: Advanced Perspective Keyboard and Numeric Keypad (v1.2.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:59:00.513912", "message": "\u2713 Scraped: Modern Analog Clock for Perspective (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:59:06.631101", "message": "\u2713 Scraped: Modern Analog Clock (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:59:13.255283", "message": "\u2713 Scraped: Cosmos Assaulters (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:59:19.472071", "message": "\u2713 Scraped: Modules Viewer (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:59:26.033639", "message": "\u2713 Scraped: DMC ICC Build-a-Thon 2022 Full Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:59:32.242296", "message": "\u2713 Scraped: DMC - Timer Script State Machine (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:59:38.902933", "message": "\u2713 Scraped: DMC Tracker Bar - ICC Build-a-Thon 2022 (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:59:45.038363", "message": "\u2713 Scraped: DMC Split Container Drag and Drop Example - ICC Build-a-Thon 2022 (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:59:51.666409", "message": "\u2713 Scraped: Roeslein & Associates - Potion Maker 3000 (Build-A-Thon 2022) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T05:59:57.846303", "message": "\u2713 Scraped: Machine Learning Manager (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:00:05.551895", "message": "\u2713 Scraped: Perspective Username and Password Change (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:00:11.946539", "message": "\u2713 Scraped: Alarm Count (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:00:18.764776", "message": "\u2713 Scraped: DINT to Alarm Bits UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:00:25.068933", "message": "\u2713 Scraped: Perspective Numeric Touch Keypad Popup (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:00:31.922778", "message": "\u2713 Scraped: Tags to Dataset Table Mapper - Monitor Instances/Folders By Two Clicks On the Fly (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:00:38.219597", "message": "\u2713 Scraped: VFD Faceplate Monitoring and Reset Control (v1.1.1)", "level": "info"}
+{"timestamp": "2025-10-01T06:00:44.904502", "message": "\u2713 Scraped: Digital Alarm (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:00:50.988774", "message": "\u2713 Scraped: Analog UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:00:57.659729", "message": "\u2713 Scraped: Perspective Dynamic Calendar (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:01:03.968645", "message": "\u2713 Scraped: UK Smart Meter Data Access (via n3rgy API) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:01:10.530253", "message": "\u2713 Scraped: CSV to Tag History Importer (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:01:16.786616", "message": "\u2713 Scraped: Numeric Display with Partner Icon (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:01:23.415968", "message": "\u2713 Scraped: 2022 Build-a-Thon (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:01:29.564744", "message": "\u2713 Scraped: Expression Field (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:01:36.019318", "message": "\u2713 Scraped: Tag Historian Viewer (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:01:42.174946", "message": "\u2713 Scraped: Shelly Switch UDT (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:01:48.874046", "message": "\u2713 Scraped: Objective Management (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:01:55.058257", "message": "\u2713 Scraped: Siemens DTL UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:02:01.707303", "message": "\u2713 Scraped: Siemens LINT UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:02:07.871507", "message": "\u2713 Scraped: Theme Selector (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:02:23.066802", "message": "\u2713 Scraped: Frigate NVR CCTV Integration (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:02:29.373971", "message": "\u2713 Scraped: Audio Manager (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:02:36.318204", "message": "\u2713 Scraped: ESPHome Sensor Management (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:02:42.571284", "message": "\u2713 Scraped: DINT to Bit UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:02:49.311734", "message": "\u2713 Scraped: Building Management System Public Demo (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:02:55.431680", "message": "\u2713 Scraped: Meters. Simple Gauge & Gauge Desired Range (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:03:02.143776", "message": "\u2713 Scraped: FTP Tool (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:03:08.572280", "message": "\u2713 Scraped: BACnet readRaw/writeRaw Scripting Views (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:03:15.362780", "message": "\u2713 Scraped: A New Perspective - Project Files (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:03:21.698845", "message": "\u2713 Scraped: Vision Symbol Library (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:03:28.588342", "message": "\u2713 Scraped: Weekly Weather (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:03:34.968498", "message": "\u2713 Scraped: SCPI Instrument Interface API (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:03:41.870671", "message": "\u2713 Scraped: Temperature Gauge / Dial (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:03:48.002204", "message": "\u2713 Scraped: Dataset To Tag Mapper (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:03:54.479115", "message": "\u2713 Scraped: Pie Chart and Power Table with additional features and minimalist view (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:04:00.472920", "message": "\u2713 Scraped: Bootstrap Icons in Perspective (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:04:07.664139", "message": "\u2713 Scraped: Base64 Encoder/Decoder (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:04:13.700413", "message": "\u2713 Scraped: Gateway Schedule Sync (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:04:20.174552", "message": "\u2713 Scraped: Remote Gateway Roster Management (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:04:26.137683", "message": "\u2713 Scraped: Alarm Configurator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:04:32.653988", "message": "\u2713 Scraped: Icon Picker (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:04:38.685704", "message": "\u2713 Scraped: Role Based Menu Navigation (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:04:45.196669", "message": "\u2713 Scraped: Game Library (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:04:51.331567", "message": "\u2713 Scraped: Opto22 RIO API Project (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:04:57.874167", "message": "\u2713 Scraped: Ignition Forms (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:05:04.311301", "message": "\u2713 Scraped: Visitor Sign-In (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:05:10.954737", "message": "\u2713 Scraped: Trend Group Management by Individual User (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:05:17.136506", "message": "\u2713 Scraped: Click to Trend (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:05:23.737101", "message": "\u2713 Scraped: Remote Tag Provider Reference Tag Creation (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:05:30.120243", "message": "\u2713 Scraped: Simple Calculator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:05:36.754750", "message": "\u2713 Scraped: ICC 2021: Machine Learning Session by Enuda (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:05:42.931793", "message": "\u2713 Scraped: Perspective Tag Meta Property Viewer (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:05:49.425087", "message": "\u2713 Scraped: Distribution Chart (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:05:55.451220", "message": "\u2713 Scraped: Vision Idle Window Looper (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:06:01.991271", "message": "\u2713 Scraped: Linux Network Device Ping UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:06:08.164934", "message": "\u2713 Scraped: Perspective PowerChart Advanced CSV Export Utility (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:06:14.722461", "message": "\u2713 Scraped: Defect Pareto Chart (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:06:20.765298", "message": "\u2713 Scraped: Perspective User Management (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:06:27.337340", "message": "\u2713 Scraped: Resizable Components In Vision Client (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:06:33.431031", "message": "\u2713 Scraped: Counter UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:06:40.016921", "message": "\u2713 Scraped: Flow Totalizer UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:06:46.075354", "message": "\u2713 Scraped: Dataset to JSON Converter (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:06:52.601787", "message": "\u2713 Scraped: Network Device Ping UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:06:58.695854", "message": "\u2713 Scraped: Weighted Average UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:07:05.387956", "message": "\u2713 Scraped: Rate Of Change UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:07:11.552590", "message": "\u2713 Scraped: Rockwell Open Library (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:07:18.100592", "message": "\u2713 Scraped: Perspective Booking App & Schedule (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:07:24.226507", "message": "\u2713 Scraped: Device Diagnostics (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:07:30.775846", "message": "\u2713 Scraped: Cyber Purple Theme (Dark & Light) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:07:36.839303", "message": "\u2713 Scraped: Perspective Security Access Panel (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:07:43.805683", "message": "\u2713 Scraped: Talkbox - Video Conferencing within Ignition (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:07:49.911203", "message": "\u2713 Scraped: Material Prediction Engine (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:07:56.417568", "message": "\u2713 Scraped: Microsoft Teams Chat Integration (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:08:02.797535", "message": "\u2713 Scraped: Perspective HMI Framework (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:08:09.496389", "message": "\u2713 Scraped: Perspective Faceplate Library (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:08:15.770931", "message": "\u2713 Scraped: Next Generation Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:08:22.350509", "message": "\u2713 Scraped: KPI Framework (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:08:28.554660", "message": "\u2713 Scraped: Cognex Readers Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:08:35.035851", "message": "\u2713 Scraped: Omron S8VK Power Supply Modbus Interface (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:08:41.097195", "message": "\u2713 Scraped: Perspective Utility Scripts (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:08:47.994899", "message": "\u2713 Scraped: Perspective Simple Tab Control (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:08:54.153728", "message": "\u2713 Scraped: Modern Table (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:09:00.785866", "message": "\u2713 Scraped: Sequence Step Indicator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:09:06.911372", "message": "\u2713 Scraped: Network Device Status (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:09:13.504408", "message": "\u2713 Scraped: JSON Viewer (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:09:19.971519", "message": "\u2713 Scraped: Power Device Library (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:09:26.361104", "message": "\u2713 Scraped: Perspective AC Controller (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:09:32.308698", "message": "\u2713 Scraped: IO Devices Library (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:09:38.881590", "message": "\u2713 Scraped: Ignition Diagnostics (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:09:45.336734", "message": "\u2713 Scraped: PDF Viewer With Toolbar (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:09:55.636785", "message": "\u2713 Scraped: Perspective ArcGIS Map with Controls (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:10:02.087506", "message": "\u2713 Scraped: Perspective Tag Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:10:08.786916", "message": "\u2713 Scraped: Perspective Popup Number Pad (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:10:14.875610", "message": "\u2713 Scraped: Perspective Popup Onscreen Keyboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:10:21.532633", "message": "\u2713 Scraped: Filter & Delete From Any Table (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:10:27.723649", "message": "\u2713 Scraped: Flexible Trend Template (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:10:34.290649", "message": "\u2713 Scraped: Vision Scheduler (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:10:40.428986", "message": "\u2713 Scraped: Dynamic IO Display (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:10:46.960326", "message": "\u2713 Scraped: SFC Example (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:10:53.019452", "message": "\u2713 Scraped: Perspective Signature Report (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:10:59.487812", "message": "\u2713 Scraped: Device IP Switcher (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:11:05.552562", "message": "\u2713 Scraped: Perspective Radar Chart (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:11:12.535764", "message": "\u2713 Scraped: Real-Time Tag WebDev Endpoint (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:11:18.644867", "message": "\u2713 Scraped: Open Weather Maps Mobile Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:11:25.120714", "message": "\u2713 Scraped: Animation CSS Library (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:11:31.162731", "message": "\u2713 Scraped: Vision Alarm Analysis Template Support SQLite (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:11:37.574587", "message": "\u2713 Scraped: Simple Sticky Note (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:11:43.952465", "message": "\u2713 Scraped: Read Raw Historical Data from Ignition MSSQL DB without Unix timestamps v.2 (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:11:50.522041", "message": "\u2713 Scraped: FlexView Froggy Game (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:11:56.576291", "message": "\u2713 Scraped: Perspective Roster Management (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:12:03.111061", "message": "\u2713 Scraped: Perspective Schedule Management (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:12:09.584334", "message": "\u2713 Scraped: Perspective Equipment Schedule (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:12:16.168405", "message": "\u2713 Scraped: Perspective Modbus Import Tool (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:12:22.274783", "message": "\u2713 Scraped: Vision Power Table With User Preferences (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:12:28.838027", "message": "\u2713 Scraped: IFM Sensor UDTs and Perspective Templates (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:12:34.940733", "message": "\u2713 Scraped: Perspective Document Management Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:12:41.511000", "message": "\u2713 Scraped: Diagnostic Information WebDev Endpoint (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:12:47.528757", "message": "\u2713 Scraped: Perspective User Management (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:12:54.165753", "message": "\u2713 Scraped: Heatmap Example (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:13:00.408697", "message": "\u2713 Scraped: Common Analog Input UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:13:07.645345", "message": "\u2713 Scraped: Table Column Editor (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:13:13.766555", "message": "\u2713 Scraped: Building in Perspective Simulator Instructions (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:13:20.797738", "message": "\u2713 Scraped: Custom Icon and Text Buttons (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:13:26.909097", "message": "\u2713 Scraped: Perspective URL Casting (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:13:33.389186", "message": "\u2713 Scraped: Time Series Chart For Process Variable (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:13:39.469077", "message": "\u2713 Scraped: Logix L5K Parser (v1.0.1)", "level": "info"}
+{"timestamp": "2025-10-01T06:13:46.099490", "message": "\u2713 Scraped: Tag History Data Browser (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:13:52.206851", "message": "\u2713 Scraped: Windows Info (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:13:58.826254", "message": "\u2713 Scraped: Perspective Noticeboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:14:04.982460", "message": "\u2713 Scraped: Incendium (v2.2.300)", "level": "info"}
+{"timestamp": "2025-10-01T06:14:11.654452", "message": "\u2713 Scraped: DMC Siemens Open Library Object (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:14:17.810411", "message": "\u2713 Scraped: Template Canvas Creator/Viewer (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:14:24.394545", "message": "\u2713 Scraped: Diagnostics UDT & Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:14:30.504509", "message": "\u2713 Scraped: Management of Change Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:14:37.106500", "message": "\u2713 Scraped: USGS API Tool (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:14:43.491432", "message": "\u2713 Scraped: Inductive University SQL Basics Queries (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:14:50.206273", "message": "\u2713 Scraped: Analog Clock (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:14:56.509720", "message": "\u2713 Scraped: Ligature (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:15:03.746196", "message": "\u2713 Scraped: Snapshot Versions (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:15:10.114659", "message": "\u2713 Scraped: YAML (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:15:17.093710", "message": "\u2713 Scraped: Custom Font Perspective Theme (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:15:23.501299", "message": "\u2713 Scraped: Theming Variables Reference View (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:15:30.481218", "message": "\u2713 Scraped: BACnet Base UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:15:36.991853", "message": "\u2713 Scraped: Analog Dashboard Display (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:15:43.602710", "message": "\u2713 Scraped: Plex (Maker Addon) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:15:49.909189", "message": "\u2713 Scraped: Home Automation Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:15:56.553891", "message": "\u2713 Scraped: Alexa Skill Handler (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:16:02.914063", "message": "\u2713 Scraped: Porthole Indicator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:16:09.657980", "message": "\u2713 Scraped: Analogue Value/Setpoint Display (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:16:15.867720", "message": "\u2713 Scraped: Python Debugger (v1.4.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:16:22.581158", "message": "\u2713 Scraped: Progressive Loading Perspective Tag Tree (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:16:28.772124", "message": "\u2713 Scraped: Simple Gauge (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:16:35.329963", "message": "\u2713 Scraped: SECS/GEM Demo Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:16:41.630609", "message": "\u2713 Scraped: Covid-19 Tracking in Perspective (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:16:48.382659", "message": "\u2713 Scraped: Scripting metatools (v1.4.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:16:54.595834", "message": "\u2713 Scraped: Tank Smart Symbol (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:17:01.350738", "message": "\u2713 Scraped: GeoFence (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:17:07.782822", "message": "\u2713 Scraped: Smart Motor Symbol (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:17:14.494881", "message": "\u2713 Scraped: Lookup Table Dynamic Dropdown for Vision (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:17:20.797487", "message": "\u2713 Scraped: Simple Shift UDT (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:17:27.577485", "message": "\u2713 Scraped: Multi-Monitor Popup Scripts (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:17:33.828865", "message": "\u2713 Scraped: Animated Toggle Switch (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:17:40.740368", "message": "\u2713 Scraped: Ignition Minesweeper (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:17:47.385206", "message": "\u2713 Scraped: Material Design Shadow Styles (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:17:54.049924", "message": "\u2713 Scraped: Trendable Numeric Label (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:18:00.293751", "message": "\u2713 Scraped: Vision Multi-Function Indicator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:18:07.426997", "message": "\u2713 Scraped: Toddler Distractor (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:18:13.983695", "message": "\u2713 Scraped: BetterGraphs 8 (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:18:20.773662", "message": "\u2713 Scraped: Bi Level Cylindrical Tank (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:18:26.950671", "message": "\u2713 Scraped: Canary API - Birdsong (v1.2.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:18:33.555851", "message": "\u2713 Scraped: Simple Data Entry Popup (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:18:39.718986", "message": "\u2713 Scraped: Tank with 2 Values (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:18:46.872879", "message": "\u2713 Scraped: Perspective Keypad (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:18:52.981769", "message": "\u2713 Scraped: Ribbon Chart (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:18:59.557412", "message": "\u2713 Scraped: QR Code Generator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:19:05.728849", "message": "\u2713 Scraped: Perspective Left Menu (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:19:12.357427", "message": "\u2713 Scraped: Expandable Nav (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:19:18.699062", "message": "\u2713 Scraped: Drawable Canvas (Vision) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:19:25.311166", "message": "\u2713 Scraped: Flow animation (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:19:31.519423", "message": "\u2713 Scraped: Switch HOA (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:19:38.315399", "message": "\u2713 Scraped: Switch On/Off (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:19:44.509221", "message": "\u2713 Scraped: Perspective Alert Dialogs (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:19:51.147560", "message": "\u2713 Scraped: JSON / Python Object Tag Sync Script (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:19:57.533588", "message": "\u2713 Scraped: Confirmation Slider (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:20:04.515558", "message": "\u2713 Scraped: BetterGraphs (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:20:10.771633", "message": "\u2713 Scraped: Bi-Level Tank (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:20:17.545661", "message": "\u2713 Scraped: Material Icons View (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:20:27.170404", "message": "\u2713 Scraped: Build-A-Thon 2019 Music Video (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:20:33.963520", "message": "\u2713 Scraped: Audit Log (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:20:40.486149", "message": "\u2713 Scraped: FactoryPacks (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:20:47.351417", "message": "\u2713 Scraped: Perspective Color Picker (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:20:53.654720", "message": "\u2713 Scraped: Perspective Tag Picker (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:21:00.535822", "message": "\u2713 Scraped: Ignition 8 Demo Projects (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:21:06.879333", "message": "\u2713 Scraped: ICC Machine Learning Workshop Materials (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:21:13.840761", "message": "\u2713 Scraped: Perspective Historical Playback (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:21:20.129625", "message": "\u2713 Scraped: Perspective Simple Light Stack (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:21:26.954646", "message": "\u2713 Scraped: Perspective System Status with Sparkline (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:21:33.237041", "message": "\u2713 Scraped: Perspective Equipment Manager (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:21:40.284188", "message": "\u2713 Scraped: Perspective Message Panel (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:21:46.626475", "message": "\u2713 Scraped: Application Help (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:21:53.303590", "message": "\u2713 Scraped: Click to Graph (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:21:59.595350", "message": "\u2713 Scraped: Perspective Dashboard Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:22:06.358105", "message": "\u2713 Scraped: PDF Manuals Barcode Scanning Viewer (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:22:12.690457", "message": "\u2713 Scraped: User Feedback (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:22:19.389409", "message": "\u2713 Scraped: Diagnostics Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:22:25.734372", "message": "\u2713 Scraped: Perspective Quick OCA / HOA (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:22:32.836890", "message": "\u2713 Scraped: Perspective Title (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:22:39.060924", "message": "\u2713 Scraped: Vision Alarm Analysis Template (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:22:45.803443", "message": "\u2713 Scraped: Table-Card Mobile-Responsive Framework (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:22:52.198298", "message": "\u2713 Scraped: Perspective Popup Windows (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:22:59.399579", "message": "\u2713 Scraped: Vision Ad Hoc Trend Chart (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:23:05.999073", "message": "\u2713 Scraped: Mobile Responsive HMI Framework (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:23:12.995916", "message": "\u2713 Scraped: 3-Way Breakpoint Framework (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:23:19.744650", "message": "\u2713 Scraped: PDF Viewer (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:23:26.635081", "message": "\u2713 Scraped: Markdown Editor (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:23:33.001626", "message": "\u2713 Scraped: Vision Tab Navigation Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:23:39.870475", "message": "\u2713 Scraped: Vision Dual Tab Navigation Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:23:46.232880", "message": "\u2713 Scraped: Vision Tree Navigation Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:23:53.022338", "message": "\u2713 Scraped: Perspective Web Navigation Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:23:59.314078", "message": "\u2713 Scraped: Perspective Menu Navigation Project (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:24:06.270282", "message": "\u2713 Scraped: Dial (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:24:12.653660", "message": "\u2713 Scraped: Temperature Gauge (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:24:19.572680", "message": "\u2713 Scraped: Alarm Indicator Template (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:24:25.877711", "message": "\u2713 Scraped: Double Gauge (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:24:32.896859", "message": "\u2713 Scraped: Gauge (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:24:39.240075", "message": "\u2713 Scraped: Text to Speech Script (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:24:45.952723", "message": "\u2713 Scraped: Alarm History WebDev Endpoint (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:24:52.110494", "message": "\u2713 Scraped: Custom Tag History Example (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:24:58.845291", "message": "\u2713 Scraped: Tag History WebDev Endpoint (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:25:05.870027", "message": "\u2713 Scraped: Vision Weather Widget (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:25:12.771958", "message": "\u2713 Scraped: Pump Smart Symbol (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:25:19.156210", "message": "\u2713 Scraped: Valve Smart Symbol (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:25:26.291801", "message": "\u2713 Scraped: Card Framework (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:25:32.576349", "message": "\u2713 Scraped: Perspective Weather Widget (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:25:39.353384", "message": "\u2713 Scraped: Perspective Calendar Component (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:25:45.910973", "message": "\u2713 Scraped: Alarm Journal with Filtering (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:25:52.564563", "message": "\u2713 Scraped: Alarm Analysis Dashboard (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:25:58.845090", "message": "\u2713 Scraped: Vision News Component (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:26:05.749030", "message": "\u2713 Scraped: Alarm Escalation Pipeline Template (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:26:12.005723", "message": "\u2713 Scraped: Alarm Indicator (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:26:18.764075", "message": "\u2713 Scraped: High Performance Flow Meter (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:26:25.079387", "message": "\u2713 Scraped: Analog Indicator with Label (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:26:31.823177", "message": "\u2713 Scraped: High Performance Labels (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:26:37.948975", "message": "\u2713 Scraped: Ad Hoc Trends (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:26:44.733513", "message": "\u2713 Scraped: High Performance Pipes (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:26:51.038807", "message": "\u2713 Scraped: High Performance Valve Pack (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:26:57.886224", "message": "\u2713 Scraped: High Performance Tank with Sparkline (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:27:04.720869", "message": "\u2713 Scraped: Perspective View Slideshow (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:27:11.530798", "message": "\u2713 Scraped: High Performance Pump Pack (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:27:17.927794", "message": "\u2713 Scraped: Downtime and Availability using Transaction Groups and Named Queries (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:27:24.987374", "message": "\u2713 Scraped: Merge Ignition Datasets (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:27:31.350342", "message": "\u2713 Scraped: Perspective News Widget (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:27:38.142581", "message": "\u2713 Scraped: Discrete Result Progress Bar (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:27:47.497814", "message": "\u2713 Scraped: Responsive Navigation Menu Using CSS Style Sheets (v1.4.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:27:54.387177", "message": "\u2713 Scraped: TrackNow - Ticket Management System (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:28:00.834755", "message": "\u2713 Scraped: Greenhouse Temperature Control App (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:28:07.667941", "message": "\u2713 Scraped: Siemens ProfiBus Diagnostic Repeater Faceplate (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:28:14.034679", "message": "\u2713 Scraped: Weather App Using Open Weather Maps (Direct Access to API) (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:28:21.262295", "message": "\u2713 Scraped: Ad Hoc Roster (v1.1.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:28:27.688008", "message": "\u2713 Scraped: Plastic ORM (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:28:34.615435", "message": "\u2713 Scraped: APC UPS Modbus Interface (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:28:40.981076", "message": "\u2713 Scraped: Flair API Demo (v1.0.0)", "level": "info"}
+{"timestamp": "2025-10-01T06:28:41.583719", "message": "Scraping complete. Found 510 resources.", "level": "info"}
+{"timestamp": "2025-10-01T06:28:41.583926", "message": "Loaded 0 past results for comparison", "level": "info"}
+{"timestamp": "2025-10-01T06:28:41.584239", "message": "Found 510 new or updated resources", "level": "info"}
+{"timestamp": "2025-10-01T06:28:41.584582", "message": "Generating Excel report: Ignition Exchange Resource Results_251001.xlsx", "level": "info"}
+{"timestamp": "2025-10-01T06:28:41.773221", "message": "Excel report saved: /data/output/Ignition Exchange Resource Results_251001.xlsx", "level": "info"}
+{"timestamp": "2025-10-01T06:28:41.776115", "message": "Updated cache with current results", "level": "info"}
+{"timestamp": "2025-10-01T06:28:41.776355", "message": "Job completed successfully in 59m 24s", "level": "info"}
+{"timestamp": "2025-10-01T07:16:15.740722", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-01T07:16:15.741066", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-01T07:16:15.742658", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-01T07:42:52.360294", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-01T07:42:52.360664", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-01T07:42:52.362228", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-01T07:45:41.092120", "message": "Configuration updated: interval=8 days", "level": "info"}
+{"timestamp": "2025-10-01T07:45:42.365680", "message": "Config changed, updating schedule to 8 days", "level": "info"}
+{"timestamp": "2025-10-01T07:45:44.505064", "message": "Configuration updated: interval=7 days", "level": "info"}
+{"timestamp": "2025-10-01T07:45:52.366633", "message": "Config changed, updating schedule to 7 days", "level": "info"}
+{"timestamp": "2025-10-01T07:50:25.497547", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-01T07:50:25.497897", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-01T07:50:25.499507", "message": "Scheduler started", "level": "info"}
