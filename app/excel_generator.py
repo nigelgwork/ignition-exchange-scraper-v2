@@ -112,6 +112,11 @@ def _write_sheet(worksheet, headers: List[str], data: List[Dict]):
             cell = worksheet.cell(row=row_idx, column=col_idx, value=value)
             cell.alignment = Alignment(horizontal='left', vertical='top', wrap_text=True)
 
+            # Make URL column clickable
+            if header == 'URL' and value:
+                cell.hyperlink = value
+                cell.font = Font(color='0563C1', underline='single')  # Blue and underlined like a link
+
     # Auto-adjust column widths
     for col_idx, header in enumerate(headers, start=1):
         col_letter = get_column_letter(col_idx)

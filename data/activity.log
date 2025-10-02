@@ -628,3 +628,31 @@
 {"timestamp": "2025-10-01T10:48:54.186257", "message": "Scheduler service starting...", "level": "info"}
 {"timestamp": "2025-10-01T10:48:54.186750", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
 {"timestamp": "2025-10-01T10:48:54.188810", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-02T09:58:59.958594", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-02T09:58:59.959248", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-02T09:58:59.965020", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-02T09:59:55.067783", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-02T09:59:55.069057", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-02T09:59:55.071662", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-02T10:36:51.071954", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-02T10:36:51.072497", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-02T10:36:51.075179", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-02T10:37:55.041785", "message": "Test email error: No module named 'app'", "level": "error"}
+{"timestamp": "2025-10-02T10:47:36.121313", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-02T10:47:36.122637", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-02T10:47:36.130913", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-02T10:47:54.975323", "message": "Scraper stopped", "level": "warning"}
+{"timestamp": "2025-10-02T10:47:55.115606", "message": "Scraper stopped", "level": "warning"}
+{"timestamp": "2025-10-02T10:48:12.802284", "message": "Configuration updated: interval=7 days", "level": "info"}
+{"timestamp": "2025-10-02T10:48:19.797023", "message": "Sending test email...", "level": "info"}
+{"timestamp": "2025-10-02T10:48:19.883579", "message": "Test email sent successfully", "level": "info"}
+{"timestamp": "2025-10-02T11:00:04.086272", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-02T11:00:04.086985", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-02T11:00:04.089146", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-02T11:02:22.054171", "message": "Configuration updated: interval=7 days", "level": "info"}
+{"timestamp": "2025-10-02T11:05:34.095008", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-02T11:05:34.095591", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-02T11:05:34.098037", "message": "Scheduler started", "level": "info"}
+{"timestamp": "2025-10-02T23:02:42.872639", "message": "Scheduler service starting...", "level": "info"}
+{"timestamp": "2025-10-02T23:02:42.873011", "message": "Configuration: interval=7 days, enabled=True", "level": "info"}
+{"timestamp": "2025-10-02T23:02:42.874844", "message": "Scheduler started", "level": "info"}

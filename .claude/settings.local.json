@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(docker compose restart:*)",
-      "Bash(docker compose:*)"
+      "Bash(docker compose:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(openssl req:*)",
+      "Bash(find:*)",
+      "Bash(git add:*)",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []

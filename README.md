@@ -1,280 +1,228 @@
-# Ignition Exchange Resource Change Tracker
+# Ignition Exchange Scraper v2
 
-A containerized application that scrapes the Inductive Automation Ignition Exchange website daily, tracks resource changes (new or updated projects), generates comparison reports in Excel format, and provides a web dashboard for monitoring and control.
+Automated web scraper for tracking and monitoring resources on the Ignition Exchange platform. Features scheduled scraping, change detection, multi-platform notifications, and a modern web dashboard.
 
 ## Features
 
-- **Automated Daily Scraping**: Scrapes the Ignition Exchange website on a configurable schedule
-- **Change Detection**: Identifies new and updated resources by comparing versions and update dates
-- **Excel Reports**: Generates comprehensive reports with 3 sheets:
-  - Updated Results (new and modified resources)
-  - Current Results (all resources from latest scrape)
-  - Past Results (all resources from previous scrape)
-- **Web Dashboard**: Real-time monitoring with:
-  - Current scraper status and progress
-  - Live activity log
-  - Schedule configuration
-  - Manual controls (Run, Pause, Stop)
-  - Job history
-  - Report downloads
-- **Fully Containerized**: Runs via `docker compose up` - no additional setup required
+- 🔄 **Automated Scheduling**: Configure scraping intervals (default: weekly)
+- 📊 **Change Detection**: Automatically compares new results with previous scrapes
+- 📢 **Multi-Platform Notifications**: Discord, Microsoft Teams, and ntfy support
+- 🗂️ **Excel Reports**: Detailed reports with clickable URLs across multiple sheets
+- 🌐 **Web Dashboard**: Modern UI for monitoring, configuration, and manual control
+- 🎨 **Dark Mode**: Toggle between light and dark themes
+- 🐳 **Fully Containerized**: Single command deployment with Docker Compose
 
 ## Quick Start
 
 ### Prerequisites
 
-- Docker
-- Docker Compose
+- Docker and Docker Compose installed
+- Port 9089 available for the web dashboard
 
-### Running the Application
+### Installation
 
-1. **Clone or navigate to the project directory**:
+1. **Clone the repository**
    ```bash
+   git clone <your-repo-url>
    cd ignition-exchange-scraper-v2
    ```
 
-2. **Start the application**:
+2. **Start the application**
    ```bash
    docker compose up -d
    ```
 
-3. **Access the dashboard**:
-   Open your browser and navigate to:
-   ```
-   http://localhost:9089
-   ```
+3. **Access the dashboard**
+   - Open your browser to: http://localhost:9089
 
-4. **Stop the application**:
-   ```bash
-   docker compose down
-   ```
+## Usage
 
-## Project Structure
+### Web Dashboard
 
-```
-/
-├── exchange_scraper_fixed.py      # Core scraper logic with Playwright
-├── app/
-│   ├── webserver.py               # Flask web server and API
-│   ├── scheduler.py               # APScheduler worker service
-│   ├── comparison.py              # Resource comparison logic
-│   ├── excel_generator.py         # Excel report generation
-│   └── static/
-│       └── index.html             # Web dashboard (HTML/CSS/JS)
-├── data/                          # Persistent data (Docker volume)
-│   ├── past_results_cache.json    # Previous scrape results
-│   └── output/                    # Generated Excel reports
-├── Dockerfile                     # Container image definition
-├── docker-compose.yml             # Multi-service orchestration
-├── requirements.txt               # Python dependencies
-└── README.md                      # This file
-```
+The dashboard provides real-time monitoring and control:
 
-## Architecture
+- **Status Panel**: View current scraping progress, elapsed time, and estimates
+- **Quick Actions**: Run scraper manually, pause, or stop operations
+- **Schedule Configuration**: Set scraping intervals (in days)
+- **Live Activity Log**: Real-time log stream of scraper activity
+- **Recent Jobs**: History of completed scraping jobs
+- **View Data**: Download generated Excel reports
+- **View Changes**: See what's new or updated in the latest scrape
 
-The application consists of two Docker services:
+### Notifications
 
-### 1. Web Service
-- **Port**: 9089
-- **Purpose**: Serves the web dashboard and provides REST API
-- **Endpoints**:
-  - `GET /` - Web dashboard
-  - `GET /api/status` - Current scraper status
-  - `GET /api/config` - Configuration
-  - `POST /api/config` - Update configuration
-  - `POST /api/control/<action>` - Control scraper (run/pause/stop/resume)
-  - `GET /api/logs` - Activity logs
-  - `POST /api/logs/clear` - Clear logs
-  - `GET /api/history` - Job history
-  - `GET /api/files` - List available reports
-  - `GET /api/download/<filename>` - Download report
+Configure notifications to receive alerts when scraping completes:
 
-### 2. Scheduler Service
-- **Purpose**: Runs scraper jobs on schedule
-- **Features**:
-  - Configurable interval (default: 7 days)
-  - Monitors control signals from web service
-  - Updates state for real-time dashboard updates
-  - Performs comparison and generates Excel reports
-  - Maintains job history
+1. Click the **Notifications** button in the dashboard
+2. Enable and configure your preferred platform(s):
 
-### Data Persistence
+#### Discord
+- **Setup**: Create a webhook in your Discord server
+  - Server Settings → Integrations → Webhooks → New Webhook
+- **Configuration**: Paste the webhook URL
+- **Features**: Includes embedded statistics and Excel file attachment
 
-All data is stored in the `./data` directory, which is mounted as a Docker volume:
-- `past_results_cache.json` - Complete dataset from last successful scrape
-- `state.json` - Current scraper state (progress, status, etc.)
-- `config.json` - User configuration (schedule interval)
-- `activity.log` - Activity logs
-- `job_history.json` - Historical job records
-- `output/*.xlsx` - Generated Excel reports
+#### Microsoft Teams
+- **Setup**: Create an incoming webhook in your Teams channel
+  - Channel → ⋯ → Connectors → Incoming Webhook
+- **Configuration**: Paste the webhook URL
+- **Features**: Adaptive card with statistics (file reference only)
 
-## Usage Guide
+#### ntfy
+- **Setup**: Choose a unique topic name
+- **Configuration**:
+  - Server URL: `https://ntfy.sh` (or your own server)
+  - Topic: Your unique topic name
+- **Features**: Simple push notifications with priority levels
+- **Mobile**: Install ntfy app and subscribe to your topic
 
-### Dashboard Overview
+3. Click **Save** to store your configuration
+4. Use individual **Test** buttons to verify each platform
 
-The web dashboard features a modern interface with:
-- **Pastel color scheme**: Easy-on-the-eyes button colors throughout
-- **Dark mode**: Toggle between light and dark themes using the moon icon switch in the header (preference saved locally)
+### Manual Control
 
-#### Current Status
-- Real-time scraper status (Idle, Running, Paused, Stopped, Done, Failed)
-- Progress bar with item count and percentage
-- Current item being scraped
-- Elapsed and estimated remaining time
+- **Run Now**: Start an immediate scrape (regardless of schedule)
+- **Pause**: Temporarily pause an in-progress scrape
+- **Stop**: Halt the current scrape operation
+- **Schedule**: Configure interval between automatic scrapes
 
-#### Schedule Configuration
-- Set scraping interval in days
-- View next scheduled run time
-- Save changes to apply immediately
+## Data Persistence
 
-#### Quick Actions
-- **Run Now**: Trigger immediate scrape
-- **Pause**: Temporarily pause running scrape
-- **Stop**: Stop scrape completely
-- **View Data**: Browse and download Excel reports
+All data is stored in the `./data` directory (Docker volume):
 
-#### Live Activity Log
-- Real-time log entries with timestamps
-- Color-coded by severity (info, warning, error)
-- Auto-scrolls to latest entries
-- Clearable
+- `config.json`: Schedule and notification settings
+- `state.json`: Current scraper state and progress
+- `job_history.json`: Historical job records
+- `past_results_cache.json`: Previous scrape results for comparison
+- `activity.log`: Application activity logs
+- `output/`: Generated Excel report files
 
-#### Recent Jobs
-- Historical job records
-- Date, duration, status, count, and errors
-- Shows last 10 jobs
+## Excel Report Format
 
-### Excel Reports
-
-Reports are named: `Ignition Exchange Resource Results_YYMMDD.xlsx`
-
-Each report contains 3 sheets:
+Each report contains three sheets:
 
 1. **Updated Results**: Only new or modified resources since last scrape
-2. **Current Results**: All resources from current scrape
-3. **Past Results**: All resources from previous scrape
+2. **Current Results**: Complete list of all resources from current scrape
+3. **Past Results**: Complete list from the previous scrape
 
-Columns in each sheet:
-- Title
-- URL
-- Version
-- Updated Date
-- Developer ID
-- Contributor
-- Tagline
+All URLs are clickable links for easy navigation.
 
-### Comparison Logic
+## Configuration Files
 
-A resource is considered "updated" if:
-- **New**: The title didn't exist in previous scrape
-- **Modified**: The title exists but version or update date has changed
-
-## Configuration
-
-### Changing Scrape Interval
-
-**Via Dashboard**:
-1. Enter desired days in "Run Every" field
-2. Click "Save"
-
-**Via API**:
-```bash
-curl -X POST http://localhost:9089/api/config \
-  -H "Content-Type: application/json" \
-  -d '{"interval_days": 7}'
+### config.json
+```json
+{
+  "interval_days": 7,
+  "enabled": true,
+  "notifications": {
+    "discord": {
+      "enabled": false,
+      "webhook_url": ""
+    },
+    "teams": {
+      "enabled": false,
+      "webhook_url": ""
+    },
+    "ntfy": {
+      "enabled": false,
+      "server_url": "https://ntfy.sh",
+      "topic": ""
+    }
+  }
+}
 ```
 
-### Manual Scrape Trigger
+## Security Considerations
 
-**Via Dashboard**: Click "Run Now" button
+### For Local/Development Use
+- The application runs on HTTP by default
+- Webhook URLs contain sensitive tokens - protect your `config.json`
+- Keep the `./data` directory private (contains configuration and logs)
 
-**Via API**:
-```bash
-curl -X POST http://localhost:9089/api/control/run
-```
+### For Production Use
+- Deploy behind a reverse proxy with HTTPS (nginx, Traefik, Caddy)
+- Use environment variables for sensitive configuration
+- Implement authentication if exposing to the internet
+- Regularly review notification webhook permissions
+- Consider using a private ntfy server for sensitive notifications
 
-## Development
+### Security Review Findings
 
-### Building Locally
+**Potential Security Concerns:**
+1. **Webhook SSRF**: The notification system makes HTTP requests to user-provided URLs
+   - **Mitigation**: Only configured administrators should access the dashboard
+   - **Recommendation**: Run in isolated network or use firewall rules
 
-```bash
-docker compose build
-```
+2. **File Operations**: File download/delete endpoints validate file extensions and prevent path traversal
+   - All file operations are restricted to `.xlsx` files only
+   - Path traversal is blocked by checking for `/` and `\` characters
 
-### Viewing Logs
-
-```bash
-# All services
-docker compose logs -f
-
-# Specific service
-docker compose logs -f web
-docker compose logs -f scheduler
-```
-
-### Running Tests
-
-The scraper can be run standalone for testing:
-
-```bash
-python exchange_scraper_fixed.py
-```
-
-## Technical Stack
-
-- **Backend**: Python 3.11+
-- **Web Framework**: Flask
-- **Scraping**: Playwright (Chromium)
-- **Parsing**: BeautifulSoup4
-- **Scheduling**: APScheduler
-- **Excel**: openpyxl
-- **Frontend**: HTML/CSS (Tailwind) + Vanilla JavaScript
-- **Deployment**: Docker + Docker Compose
+3. **No Authentication**: The web dashboard has no built-in authentication
+   - **Mitigation**: Deploy behind authenticated reverse proxy for production
+   - **Recommendation**: Use tools like Authelia, OAuth2 Proxy, or Cloudflare Access
 
 ## Troubleshooting
 
-### Scraper Not Running
+### Containers won't start
+```bash
+# Check logs
+docker compose logs
 
-1. Check scheduler logs: `docker compose logs scheduler`
-2. Verify configuration: Check `data/config.json`
-3. Check for control signals: Look in `data/` for `.signal` files
+# Rebuild containers
+docker compose down
+docker compose up -d --build
+```
 
-### Dashboard Not Loading
+### Scraper not running
+- Check the Live Activity Log in the dashboard
+- Verify the schedule interval is set correctly
+- Ensure the scheduler container is running: `docker compose ps`
 
-1. Check web service status: `docker compose ps`
-2. Check web service logs: `docker compose logs web`
-3. Verify port 9089 is not in use: `lsof -i :9089` (macOS/Linux)
+### Notifications not sending
+- Use the **Test** buttons to verify configuration
+- Check webhook URLs are correct and active
+- Review the Activity Log for error messages
+- Verify network connectivity from container
 
-### Reports Not Generating
+### Excel files not generating
+- Check if scraper completed successfully in Recent Jobs
+- Look for errors in the Activity Log
+- Verify `data/output/` directory has write permissions
 
-1. Check for errors in scheduler logs
-2. Verify `data/output/` directory exists and is writable
-3. Check disk space
+## Development
 
-### Playwright/Browser Issues
+### Project Structure
+```
+/
+├── exchange_scraper_fixed.py   # Core scraping logic
+├── app/
+│   ├── webserver.py            # Flask API server
+│   ├── scheduler.py            # Background job scheduler
+│   ├── notifications.py        # Multi-platform notifications
+│   ├── comparison.py           # Change detection logic
+│   ├── excel_generator.py     # Excel report generation
+│   └── static/
+│       └── index.html          # Web dashboard UI
+├── data/                       # Persistent data (Docker volume)
+├── Dockerfile                  # Container build instructions
+├── docker-compose.yml          # Service orchestration
+└── requirements.txt            # Python dependencies
+```
 
-If scraping fails with browser errors:
+### Running Tests
+The application includes a test report generator:
 
-1. Rebuild container: `docker compose build --no-cache`
-2. Check Dockerfile has all necessary dependencies
-3. Try running with `HEADLESS=False` for debugging (requires code modification)
-
-## Performance Considerations
-
-- Full scrape of ~500 resources takes approximately 1-2 hours
-- Each resource page requires a separate request
-- 0.5 second delay between requests to be respectful to server
-- Memory usage: ~500MB per container
-- Disk usage: ~100KB per Excel report
+```bash
+docker compose exec scheduler python app/generate_test_report.py
+```
 
 ## License
 
-This project is provided as-is for tracking Ignition Exchange resources.
+This project is provided as-is for monitoring the Inductive Automation Ignition Exchange.
 
 ## Contributing
 
-This is a self-contained project. Modify as needed for your specific requirements.
-
-## Support
-
-For issues or questions, refer to the project documentation or raise an issue in the repository.
+Contributions welcome! Please ensure:
+- Code follows existing style
+- Security considerations are documented
+- Testing is performed before submitting PRs

@@ -1,63 +1,10 @@
 """
-Notification system for email, Discord, and Microsoft Teams
+Notification system for Discord, Microsoft Teams, and ntfy
 """
 import json
 import requests
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from email.mime.application import MIMEApplication
 from typing import Dict, List
 from pathlib import Path
-
-
-def send_email_notification(config: Dict, subject: str, body: str, html_body: str = None, attachment_path: Path = None) -> bool:
-    """
-    Send email notification with optional file attachment
-
-    Args:
-        config: Email configuration dict with keys: smtp_server, smtp_port, username, password, from_email, to_emails
-        subject: Email subject
-        body: Plain text body
-        html_body: Optional HTML body
-        attachment_path: Optional path to file to attach
-
-    Returns:
-        True if successful, False otherwise
-    """
-    try:
-        if not config.get('enabled'):
-            return False
-
-        msg = MIMEMultipart('mixed')
-        msg['From'] = config.get('from_email', config.get('username'))
-        msg['To'] = ', '.join(config.get('to_emails', []))
-        msg['Subject'] = subject
-
-        # Create alternative part for text/html
-        msg_alternative = MIMEMultipart('alternative')
-        msg_alternative.attach(MIMEText(body, 'plain'))
-        if html_body:
-            msg_alternative.attach(MIMEText(html_body, 'html'))
-        msg.attach(msg_alternative)
-
-        # Attach file if provided
-        if attachment_path and attachment_path.exists():
-            with open(attachment_path, 'rb') as f:
-                attachment = MIMEApplication(f.read(), _subtype='vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-                attachment.add_header('Content-Disposition', 'attachment', filename=attachment_path.name)
-                msg.attach(attachment)
-
-        # Connect and send
-        with smtplib.SMTP(config.get('smtp_server'), config.get('smtp_port', 587)) as server:
-            server.starttls()
-            server.login(config.get('username'), config.get('password'))
-            server.send_message(msg)
-
-        return True
-    except Exception as e:
-        print(f"Email notification failed: {e}")
-        return False
 
 
 def send_discord_notification(config: Dict, message: str, embeds: List[Dict] = None, file_path: Path = None) -> bool:
@@ -151,7 +98,55 @@ def send_teams_notification(config: Dict, title: str, text: str, facts: List[Dic
         return False
 
 
-def notify_scrape_complete(config: Dict, stats: Dict, excel_file_path: Path) -> Dict[str, bool]:
+def send_ntfy_notification(config: Dict, title: str, message: str, priority: int = 3, tags: List[str] = None, attach_url: str = None) -> bool:
+    """
+    Send ntfy notification
+
+    Args:
+        config: ntfy configuration with 'server_url' and 'topic'
+        title: Notification title
+        message: Notification message
+        priority: Priority level (1=min, 3=default, 5=max)
+        tags: Optional list of tags (e.g., ['warning', 'check'])
+        attach_url: Optional URL to attach (e.g., link to download file)
+
+    Returns:
+        True if successful, False otherwise
+    """
+    try:
+        if not config.get('enabled'):
+            return False
+
+        server_url = config.get('server_url', 'https://ntfy.sh')
+        topic = config.get('topic')
+
+        if not topic:
+            return False
+
+        # Construct the full URL
+        url = f"{server_url.rstrip('/')}/{topic}"
+
+        # Prepare headers
+        headers = {
+            'Title': title,
+            'Priority': str(priority)
+        }
+
+        if tags:
+            headers['Tags'] = ','.join(tags)
+
+        if attach_url:
+            headers['Attach'] = attach_url
+
+        # Send the notification
+        response = requests.post(url, data=message.encode('utf-8'), headers=headers, timeout=10)
+        return response.status_code == 200
+    except Exception as e:
+        print(f"ntfy notification failed: {e}")
+        return False
+
+
+def notify_scrape_complete(config: Dict, stats: Dict, excel_file_path: Path, updated_resources: List[Dict] = None) -> Dict[str, bool]:
     """
     Send notifications about completed scrape to all enabled channels
 
@@ -159,63 +154,40 @@ def notify_scrape_complete(config: Dict, stats: Dict, excel_file_path: Path) -> 
         config: Full notification configuration
         stats: Statistics dict from comparison
         excel_file_path: Path to generated Excel file
+        updated_resources: Optional list of updated resources to include in notifications
 
     Returns:
         Dict with success status for each channel
     """
     results = {
-        'email': False,
         'discord': False,
-        'teams': False
+        'teams': False,
+        'ntfy': False
     }
 
     excel_filename = excel_file_path.name
+    total_changes = stats.get('total_updated', 0)
 
     # Prepare message content
-    subject = f"Exchange Scraper Complete - {stats.get('total_updated', 0)} Updates Found"
+    if total_changes == 0:
+        subject = "Exchange Scraper Complete - No Changes Detected"
+        changes_summary = "No changes were detected in this scrape."
+    else:
+        subject = f"Exchange Scraper Complete - {total_changes} Update{'' if total_changes == 1 else 's'} Found"
 
-    plain_body = f"""
-Exchange Scraper Job Complete
+        # Format changes for plain text
+        changes_list = []
+        if updated_resources:
+            for i, resource in enumerate(updated_resources[:10], 1):  # Limit to 10 for brevity
+                title = resource.get('title', 'Unknown')
+                version = resource.get('version', 'N/A')
+                changes_list.append(f"{i}. {title} (v{version})")
 
-Total Resources: {stats.get('total_current', 0)}
-New Resources: {stats.get('new_count', 0)}
-Updated Resources: {stats.get('modified_count', 0)}
-Total Changes: {stats.get('total_updated', 0)}
-
-Report File: {excel_filename}
-
-This is an automated message from the Ignition Exchange Scraper.
-    """.strip()
-
-    html_body = f"""
-<html>
-<body style="font-family: Arial, sans-serif;">
-    <h2 style="color: #2563eb;">Exchange Scraper Job Complete</h2>
-    <table style="border-collapse: collapse; width: 100%; max-width: 500px;">
-        <tr><td style="padding: 8px; border-bottom: 1px solid #e5e7eb;"><strong>Total Resources:</strong></td>
-            <td style="padding: 8px; border-bottom: 1px solid #e5e7eb;">{stats.get('total_current', 0)}</td></tr>
-        <tr><td style="padding: 8px; border-bottom: 1px solid #e5e7eb;"><strong>New Resources:</strong></td>
-            <td style="padding: 8px; border-bottom: 1px solid #e5e7eb;">{stats.get('new_count', 0)}</td></tr>
-        <tr><td style="padding: 8px; border-bottom: 1px solid #e5e7eb;"><strong>Updated Resources:</strong></td>
-            <td style="padding: 8px; border-bottom: 1px solid #e5e7eb;">{stats.get('modified_count', 0)}</td></tr>
-        <tr><td style="padding: 8px; border-bottom: 1px solid #e5e7eb;"><strong>Total Changes:</strong></td>
-            <td style="padding: 8px; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #2563eb;">{stats.get('total_updated', 0)}</td></tr>
-    </table>
-    <p style="margin-top: 20px; color: #6b7280;">Report File: <strong>{excel_filename}</strong></p>
-    <p style="margin-top: 20px; font-size: 12px; color: #9ca3af;">This is an automated message from the Ignition Exchange Scraper.</p>
-</body>
-</html>
-    """.strip()
-
-    # Send Email with attachment
-    if config.get('email', {}).get('enabled'):
-        results['email'] = send_email_notification(
-            config['email'],
-            subject,
-            plain_body,
-            html_body,
-            excel_file_path
-        )
+            changes_summary = "Changes:\n" + "\n".join(changes_list)
+            if len(updated_resources) > 10:
+                changes_summary += f"\n... and {len(updated_resources) - 10} more"
+        else:
+            changes_summary = f"{total_changes} resources were updated."
 
     # Send Discord with file
     if config.get('discord', {}).get('enabled'):
@@ -251,6 +223,27 @@ This is an automated message from the Ignition Exchange Scraper.
             "The Exchange scraper has completed successfully.",
             teams_facts,
             excel_file_path
+        )
+
+    # Send ntfy notification
+    if config.get('ntfy', {}).get('enabled'):
+        ntfy_message = f"""Exchange Scraper Complete
+
+Total Resources: {stats.get('total_current', 0)}
+New: {stats.get('new_count', 0)} | Updated: {stats.get('modified_count', 0)}
+Total Changes: {total_changes}
+
+{changes_summary}"""
+
+        tags = ['white_check_mark'] if total_changes == 0 else ['bell']
+        priority = 3 if total_changes == 0 else 4
+
+        results['ntfy'] = send_ntfy_notification(
+            config['ntfy'],
+            subject,
+            ntfy_message,
+            priority=priority,
+            tags=tags
         )
 
     return results

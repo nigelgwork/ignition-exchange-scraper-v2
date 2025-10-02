@@ -1,4 +1,19 @@
 {
   "interval_days": 7,
-  "enabled": true
+  "enabled": true,
+  "notifications": {
+    "discord": {
+      "enabled": false,
+      "webhook_url": ""
+    },
+    "teams": {
+      "enabled": false,
+      "webhook_url": ""
+    },
+    "ntfy": {
+      "enabled": false,
+      "server_url": "https://ntfy.sh",
+      "topic": ""
+    }
+  }
 }

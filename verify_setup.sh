@@ -66,7 +66,7 @@ if [ "$all_present" = true ]; then
     echo "  docker compose up -d"
     echo
     echo "Then access the dashboard at:"
-    echo "  http://localhost:8080"
+    echo "  http://localhost:9089"
 else
     echo "✗ Setup verification FAILED"
     echo "Some files or directories are missing"

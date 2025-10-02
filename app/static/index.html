@@ -170,6 +170,26 @@
             background-color: #2d3748 !important;
         }
 
+        body.dark-mode .bg-teal-300 {
+            background-color: #4fd1c5 !important;
+            color: #1a202c !important;
+        }
+
+        body.dark-mode .bg-teal-300:hover,
+        body.dark-mode .hover\:bg-teal-400:hover {
+            background-color: #38b2ac !important;
+        }
+
+        body.dark-mode .bg-pink-300 {
+            background-color: #f687b3 !important;
+            color: #1a202c !important;
+        }
+
+        body.dark-mode .bg-pink-300:hover,
+        body.dark-mode .hover\:bg-pink-400:hover {
+            background-color: #ed64a6 !important;
+        }
+
         /* Dark mode toggle switch */
         .toggle-switch {
             position: relative;
@@ -225,14 +245,19 @@
                 <h1 class="text-3xl font-bold text-gray-800">Exchange Scraper</h1>
                 <div class="flex items-center gap-4">
                     <div class="flex items-center gap-2">
-                        <span class="text-sm text-gray-600">🌙</span>
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
                         <label class="toggle-switch">
                             <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
                             <span class="toggle-slider"></span>
                         </label>
                     </div>
-                    <button onclick="refreshAll()" class="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-lg">
-                        ⚙ Refresh
+                    <button onclick="refreshAll()" class="flex items-center gap-2 px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-lg">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                        <span>Refresh</span>
                     </button>
                 </div>
             </div>
@@ -277,26 +302,48 @@
             <!-- Quick Actions -->
             <div class="mb-4">
                 <h3 class="text-lg font-bold text-gray-800 mb-3">Quick Actions</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     <button onclick="controlAction('run')"
-                            class="bg-green-300 hover:bg-green-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        ▶ Run Now
+                            class="flex items-center justify-center gap-2 bg-green-300 hover:bg-green-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <span>Run Now</span>
                     </button>
                     <button onclick="controlAction('pause')"
-                            class="bg-yellow-300 hover:bg-yellow-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        ⏸ Pause
+                            class="flex items-center justify-center gap-2 bg-yellow-300 hover:bg-yellow-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                        </svg>
+                        <span>Pause</span>
                     </button>
                     <button onclick="controlAction('stop')"
-                            class="bg-red-300 hover:bg-red-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        ⏹ Stop
+                            class="flex items-center justify-center gap-2 bg-red-300 hover:bg-red-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 6h12v12H6z"/>
+                        </svg>
+                        <span>Stop</span>
                     </button>
                     <button onclick="showFilesModal()"
-                            class="bg-indigo-300 hover:bg-indigo-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        📊 View Data
+                            class="flex items-center justify-center gap-2 bg-indigo-300 hover:bg-indigo-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                        <span>View Data</span>
+                    </button>
+                    <button onclick="showChangesModal()"
+                            class="flex items-center justify-center gap-2 bg-teal-300 hover:bg-teal-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
+                        </svg>
+                        <span>View Changes</span>
                     </button>
                     <button onclick="showNotificationsModal()"
-                            class="bg-purple-300 hover:bg-purple-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        🔔 Notifications
+                            class="flex items-center justify-center gap-2 bg-purple-300 hover:bg-purple-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                        </svg>
+                        <span>Notifications</span>
                     </button>
                 </div>
             </div>
@@ -312,8 +359,11 @@
                                onblur="window.intervalDaysEditing = false">
                         <span>days</span>
                         <button onclick="saveSchedule()"
-                                class="bg-blue-300 hover:bg-blue-400 text-gray-800 text-sm font-semibold py-1.5 px-4 rounded">
-                            Save
+                                class="flex items-center gap-2 bg-blue-300 hover:bg-blue-400 text-gray-800 text-sm font-semibold py-1.5 px-4 rounded">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Save</span>
                         </button>
                     </div>
                     <div class="flex items-center gap-2 ml-auto">
@@ -392,30 +442,22 @@
                 </button>
             </div>
 
-            <!-- Email Settings -->
-            <div class="mb-6 border-b pb-4">
-                <div class="flex items-center mb-3">
-                    <input type="checkbox" id="emailEnabled" class="mr-2">
-                    <label class="font-bold text-lg">📧 Email Notifications</label>
-                </div>
-                <div class="grid grid-cols-2 gap-3 ml-6 text-sm">
-                    <input type="text" id="emailSmtpServer" placeholder="SMTP Server" class="border rounded px-2 py-1">
-                    <input type="number" id="emailSmtpPort" placeholder="Port (587)" class="border rounded px-2 py-1">
-                    <input type="text" id="emailUsername" placeholder="Username" class="border rounded px-2 py-1 col-span-2">
-                    <input type="password" id="emailPassword" placeholder="Password" class="border rounded px-2 py-1 col-span-2">
-                    <input type="email" id="emailFrom" placeholder="From Email" class="border rounded px-2 py-1">
-                    <input type="text" id="emailTo" placeholder="To Emails (comma-separated)" class="border rounded px-2 py-1">
-                </div>
-            </div>
-
             <!-- Discord Settings -->
-            <div class="mb-6 border-b pb-4">
+            <div class="mb-6">
                 <div class="flex items-center mb-3">
                     <input type="checkbox" id="discordEnabled" class="mr-2">
-                    <label class="font-bold text-lg">💬 Discord Notifications</label>
+                    <label class="font-bold text-lg">
+                        <svg class="w-5 h-5 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026 13.83 13.83 0 0 0 1.226-1.963.074.074 0 0 0-.041-.104 13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028zM8.02 15.278c-1.182 0-2.157-1.069-2.157-2.38 0-1.312.956-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.956 2.38-2.157 2.38zm7.975 0c-1.183 0-2.157-1.069-2.157-2.38 0-1.312.955-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.946 2.38-2.157 2.38z"/>
+                        </svg>
+                        Discord Notifications
+                    </label>
                 </div>
-                <div class="ml-6 text-sm">
-                    <input type="text" id="discordWebhook" placeholder="Discord Webhook URL" class="border rounded px-2 py-1 w-full">
+                <div class="ml-6">
+                    <p class="text-xs text-gray-600 mb-3">
+                        <strong>Get webhook URL:</strong> Server Settings → Integrations → Webhooks → New Webhook
+                    </p>
+                    <input type="text" id="discordWebhook" placeholder="Discord Webhook URL" class="border rounded px-2 py-1 text-sm w-full">
                 </div>
             </div>
 
@@ -423,16 +465,81 @@
             <div class="mb-6">
                 <div class="flex items-center mb-3">
                     <input type="checkbox" id="teamsEnabled" class="mr-2">
-                    <label class="font-bold text-lg">📊 Microsoft Teams Notifications</label>
+                    <label class="font-bold text-lg">
+                        <svg class="w-5 h-5 inline-block mr-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.625 8.127v7.746a1.127 1.127 0 01-1.127 1.127h-7.746a1.127 1.127 0 01-1.127-1.127V8.127A1.127 1.127 0 0111.752 7h7.746a1.127 1.127 0 011.127 1.127zM9.502 7H3.127A1.127 1.127 0 002 8.127v7.746A1.127 1.127 0 003.127 17h6.375V7zm0-5v3.873H2V3.127A1.127 1.127 0 013.127 2h5.248A1.127 1.127 0 019.502 3.127zM11.625 2h8.248A1.127 1.127 0 0121 3.127v2.746h-9.375V2z"/>
+                        </svg>
+                        Microsoft Teams Notifications
+                    </label>
                 </div>
-                <div class="ml-6 text-sm">
-                    <input type="text" id="teamsWebhook" placeholder="Teams Webhook URL" class="border rounded px-2 py-1 w-full">
+                <div class="ml-6">
+                    <p class="text-xs text-gray-600 mb-3">
+                        <strong>Get webhook URL:</strong> Channel → ⋯ → Connectors → Incoming Webhook
+                    </p>
+                    <input type="text" id="teamsWebhook" placeholder="Teams Webhook URL" class="border rounded px-2 py-1 text-sm w-full">
                 </div>
             </div>
 
-            <button onclick="saveNotifications()" class="w-full bg-blue-300 hover:bg-blue-400 text-gray-800 font-semibold py-2 px-4 rounded">
-                Save Notifications
-            </button>
+            <!-- ntfy Settings -->
+            <div class="mb-6">
+                <div class="flex items-center mb-3">
+                    <input type="checkbox" id="ntfyEnabled" class="mr-2">
+                    <label class="font-bold text-lg">
+                        <svg class="w-5 h-5 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                        </svg>
+                        ntfy Notifications
+                    </label>
+                </div>
+                <div class="ml-6">
+                    <p class="text-xs text-gray-600 mb-3">
+                        <strong>Default server:</strong> https://ntfy.sh (or use your own server)<br>
+                        <strong>Topic:</strong> Choose a unique topic name for your notifications
+                    </p>
+                    <div class="grid grid-cols-1 gap-3 text-sm">
+                        <input type="text" id="ntfyServer" placeholder="Server URL (e.g. https://ntfy.sh)" class="border rounded px-2 py-1">
+                        <input type="text" id="ntfyTopic" placeholder="Topic (e.g. exchange-scraper-alerts)" class="border rounded px-2 py-1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-4 gap-2 mb-3">
+                <button onclick="testNotification('discord')" class="flex items-center justify-center gap-2 bg-purple-300 hover:bg-purple-400 text-gray-800 font-semibold py-2 px-3 rounded text-sm">
+                    Test Discord
+                </button>
+                <button onclick="testNotification('teams')" class="flex items-center justify-center gap-2 bg-blue-300 hover:bg-blue-400 text-gray-800 font-semibold py-2 px-3 rounded text-sm">
+                    Test Teams
+                </button>
+                <button onclick="testNotification('ntfy')" class="flex items-center justify-center gap-2 bg-teal-300 hover:bg-teal-400 text-gray-800 font-semibold py-2 px-3 rounded text-sm">
+                    Test ntfy
+                </button>
+                <button onclick="saveNotifications()" class="flex items-center justify-center gap-2 bg-green-300 hover:bg-green-400 text-gray-800 font-semibold py-2 px-3 rounded text-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Changes Modal -->
+    <div id="changesModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-xl p-6 max-w-6xl w-full mx-4 max-h-[85vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800">Latest Changes</h2>
+                    <p class="text-sm text-gray-600" id="changesSubtitle">New and updated resources from the last scrape</p>
+                </div>
+                <button onclick="closeChangesModal()"
+                        class="text-gray-500 hover:text-gray-700 text-2xl font-bold">
+                    ×
+                </button>
+            </div>
+
+            <div id="changesContent" class="space-y-3">
+                <div class="text-gray-500">Loading...</div>
+            </div>
         </div>
     </div>
 
@@ -677,10 +784,16 @@
                                 <div class="font-medium">${escapeHtml(file.name)}</div>
                                 <div class="text-sm text-gray-500">${size} • ${date}</div>
                             </div>
-                            <a href="${file.url}" download
-                               class="px-4 py-2 bg-blue-300 hover:bg-blue-400 text-gray-800 rounded-lg text-sm">
-                                Download
-                            </a>
+                            <div class="flex gap-2">
+                                <a href="${file.url}" download
+                                   class="px-4 py-2 bg-blue-300 hover:bg-blue-400 text-gray-800 rounded-lg text-sm">
+                                    Download
+                                </a>
+                                <button onclick="deleteFile('${escapeHtml(file.name)}')"
+                                        class="px-4 py-2 bg-red-300 hover:bg-red-400 text-gray-800 rounded-lg text-sm">
+                                    Delete
+                                </button>
+                            </div>
                         </div>
                     `;
                 }).join('');
@@ -696,6 +809,31 @@
             document.getElementById('filesModal').classList.add('hidden');
         }
 
+        // Delete file
+        async function deleteFile(filename) {
+            if (!confirm(`Are you sure you want to delete ${filename}?`)) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/delete/${filename}`, {
+                    method: 'DELETE'
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert('File deleted successfully');
+                    showFilesModal(); // Refresh the file list
+                } else {
+                    alert('Failed to delete file: ' + (result.error || result.message));
+                }
+            } catch (error) {
+                console.error('Error deleting file:', error);
+                alert('Error deleting file');
+            }
+        }
+
         // Show notifications modal
         async function showNotificationsModal() {
             document.getElementById('notificationsModal').classList.remove('hidden');
@@ -706,15 +844,6 @@
                 const config = await response.json();
                 const notif = config.notifications || {};
 
-                // Email
-                document.getElementById('emailEnabled').checked = notif.email?.enabled || false;
-                document.getElementById('emailSmtpServer').value = notif.email?.smtp_server || '';
-                document.getElementById('emailSmtpPort').value = notif.email?.smtp_port || 587;
-                document.getElementById('emailUsername').value = notif.email?.username || '';
-                document.getElementById('emailPassword').value = notif.email?.password || '';
-                document.getElementById('emailFrom').value = notif.email?.from_email || '';
-                document.getElementById('emailTo').value = notif.email?.to_emails?.join(', ') || '';
-
                 // Discord
                 document.getElementById('discordEnabled').checked = notif.discord?.enabled || false;
                 document.getElementById('discordWebhook').value = notif.discord?.webhook_url || '';
@@ -722,6 +851,11 @@
                 // Teams
                 document.getElementById('teamsEnabled').checked = notif.teams?.enabled || false;
                 document.getElementById('teamsWebhook').value = notif.teams?.webhook_url || '';
+
+                // ntfy
+                document.getElementById('ntfyEnabled').checked = notif.ntfy?.enabled || false;
+                document.getElementById('ntfyServer').value = notif.ntfy?.server_url || 'https://ntfy.sh';
+                document.getElementById('ntfyTopic').value = notif.ntfy?.topic || '';
             } catch (error) {
                 console.error('Error loading notifications config:', error);
             }
@@ -734,15 +868,6 @@
         // Save notifications config
         async function saveNotifications() {
             const notifications = {
-                email: {
-                    enabled: document.getElementById('emailEnabled').checked,
-                    smtp_server: document.getElementById('emailSmtpServer').value,
-                    smtp_port: parseInt(document.getElementById('emailSmtpPort').value) || 587,
-                    username: document.getElementById('emailUsername').value,
-                    password: document.getElementById('emailPassword').value,
-                    from_email: document.getElementById('emailFrom').value,
-                    to_emails: document.getElementById('emailTo').value.split(',').map(e => e.trim()).filter(e => e)
-                },
                 discord: {
                     enabled: document.getElementById('discordEnabled').checked,
                     webhook_url: document.getElementById('discordWebhook').value
@@ -750,6 +875,11 @@
                 teams: {
                     enabled: document.getElementById('teamsEnabled').checked,
                     webhook_url: document.getElementById('teamsWebhook').value
+                },
+                ntfy: {
+                    enabled: document.getElementById('ntfyEnabled').checked,
+                    server_url: document.getElementById('ntfyServer').value || 'https://ntfy.sh',
+                    topic: document.getElementById('ntfyTopic').value
                 }
             };
 
@@ -806,10 +936,107 @@
             return div.innerHTML;
         }
 
-        // Close modal on outside click
+        // Show changes modal
+        async function showChangesModal() {
+            document.getElementById('changesModal').classList.remove('hidden');
+
+            try {
+                const response = await fetch(`${API_BASE}/changes`);
+                const data = await response.json();
+
+                const changesContent = document.getElementById('changesContent');
+
+                if (data.error) {
+                    changesContent.innerHTML = `<div class="text-red-500">${escapeHtml(data.error)}</div>`;
+                    return;
+                }
+
+                if (!data.changes || data.changes.length === 0) {
+                    changesContent.innerHTML = '<div class="text-gray-500">No changes detected in the last scrape</div>';
+                    return;
+                }
+
+                // Update subtitle with count and file
+                document.getElementById('changesSubtitle').textContent =
+                    `${data.count} change${data.count !== 1 ? 's' : ''} found in ${data.file}`;
+
+                // Display changes as cards
+                changesContent.innerHTML = data.changes.map(change => {
+                    return `
+                        <div class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-semibold text-gray-800">${escapeHtml(change.Title || 'Unknown')}</h3>
+                                <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">v${escapeHtml(change.Version || 'N/A')}</span>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm mb-2">
+                                <div>
+                                    <span class="text-gray-600">Resource ID:</span>
+                                    <span class="font-medium">${escapeHtml(change['Resource ID'] || 'N/A')}</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">Updated:</span>
+                                    <span class="font-medium">${escapeHtml(change['Updated Date'] || 'N/A')}</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">Contributor:</span>
+                                    <span class="font-medium">${escapeHtml(change.Contributor || 'N/A')}</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">Developer ID:</span>
+                                    <span class="font-medium">${escapeHtml(change['Developer ID'] || 'N/A')}</span>
+                                </div>
+                            </div>
+                            ${change.Tagline ? `<p class="text-sm text-gray-600 mb-2">${escapeHtml(change.Tagline)}</p>` : ''}
+                            ${change.URL ? `<a href="${escapeHtml(change.URL)}" target="_blank" class="text-sm text-blue-600 hover:underline">View Resource →</a>` : ''}
+                        </div>
+                    `;
+                }).join('');
+
+            } catch (error) {
+                console.error('Error loading changes:', error);
+                document.getElementById('changesContent').innerHTML =
+                    '<div class="text-red-500">Error loading changes</div>';
+            }
+        }
+
+        function closeChangesModal() {
+            document.getElementById('changesModal').classList.add('hidden');
+        }
+
+        // Send test notification
+        async function testNotification(channel) {
+            if (!confirm(`Send a test ${channel} notification with the latest scrape results?`)) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/test-notification/${channel}`, {
+                    method: 'POST'
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert(`Test ${channel} notification sent successfully!`);
+                } else {
+                    alert(`Failed to send test ${channel} notification: ` + (result.error || result.message));
+                }
+            } catch (error) {
+                console.error(`Error sending test ${channel} notification:`, error);
+                alert(`Error sending test ${channel} notification. Make sure ${channel} is configured in Notifications.`);
+            }
+        }
+
+        // Close modals on outside click
         document.getElementById('filesModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeFilesModal();
+            }
+        });
+
+        document.getElementById('changesModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeChangesModal();
             }
         });
 

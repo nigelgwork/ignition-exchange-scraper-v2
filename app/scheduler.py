@@ -240,7 +240,12 @@ def run_scraper_job():
         config = load_config()
         if config.get('notifications'):
             append_log('Sending notifications...')
-            notif_results = notify_scrape_complete(config.get('notifications'), stats, output_path)
+            notif_results = notify_scrape_complete(
+                config.get('notifications'),
+                stats,
+                output_path,
+                updated_resources  # Pass the updated resources for detailed email
+            )
             for channel, success in notif_results.items():
                 if success:
                     append_log(f'  ✓ {channel.capitalize()} notification sent')
