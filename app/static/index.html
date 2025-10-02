@@ -27,7 +27,6 @@
 
         .log-entry {
             font-family: 'Courier New', monospace;
-            font-size: 0.875rem;
         }
 
         .log-info { color: #6B7280; }
@@ -35,8 +34,17 @@
         .log-error { color: #EF4444; }
 
         #activityLog {
-            max-height: 300px;
+            max-height: 220px;
             overflow-y: auto;
+        }
+
+        .compact-table {
+            font-size: 0.813rem;
+        }
+
+        .compact-table th,
+        .compact-table td {
+            padding: 0.5rem 0.625rem;
         }
 
         .progress-bar {
@@ -238,9 +246,9 @@
     </style>
 </head>
 <body class="bg-gray-100">
-    <div class="container mx-auto px-4 py-8 max-w-6xl">
+    <div class="container mx-auto px-4 py-4 max-w-7xl">
         <!-- Header -->
-        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+        <div class="bg-white rounded-lg shadow-md p-4 mb-4">
             <div class="flex justify-between items-center">
                 <h1 class="text-3xl font-bold text-gray-800">Exchange Scraper</h1>
                 <div class="flex items-center gap-4">
@@ -263,120 +271,141 @@
             </div>
         </div>
 
-        <!-- Current Status -->
-        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">Current Status</h2>
-            <div class="mb-4">
-                <span class="status-indicator" id="statusIndicator"></span>
-                <span class="text-lg font-semibold capitalize" id="statusText">Idle</span>
+        <!-- Main Grid Layout - 3 columns on large screens -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
+            <!-- Column 1: Current Status -->
+            <div class="bg-white rounded-lg shadow-md p-5">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Status</h2>
+                <div class="mb-4">
+                    <span class="status-indicator" id="statusIndicator"></span>
+                    <span class="text-lg font-semibold capitalize" id="statusText">Idle</span>
+                </div>
+
+                <div class="mb-4">
+                    <div class="flex justify-between text-sm text-gray-600 mb-1">
+                        <span>Progress</span>
+                        <span id="progressText">0/0 (0%)</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5 overflow-hidden">
+                        <div id="progressBar" class="progress-bar bg-blue-500 h-5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Current:</span>
+                        <span class="font-medium text-right" id="currentItem">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Elapsed:</span>
+                        <span class="font-medium" id="elapsedTime">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Remaining:</span>
+                        <span class="font-medium" id="remainingTime">-</span>
+                    </div>
+                    <div class="flex justify-between pt-2 border-t border-gray-200">
+                        <span class="text-gray-600">Next Run:</span>
+                        <span class="font-medium" id="nextRun">-</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-4">
-                <div class="flex justify-between text-sm text-gray-600 mb-1">
-                    <span>Progress</span>
-                    <span id="progressText">0/0 (0%)</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-6 overflow-hidden">
-                    <div id="progressBar" class="progress-bar bg-blue-500 h-6 rounded-full" style="width: 0%"></div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                <div>
-                    <span class="text-gray-600">Current:</span>
-                    <span class="font-medium" id="currentItem">-</span>
-                </div>
-                <div>
-                    <span class="text-gray-600">Elapsed:</span>
-                    <span class="font-medium" id="elapsedTime">-</span>
-                </div>
-                <div>
-                    <span class="text-gray-600">Est. Remaining:</span>
-                    <span class="font-medium" id="remainingTime">-</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quick Actions and Schedule - Compact Layout -->
-        <div class="bg-white rounded-lg shadow-md p-4 mb-6">
-            <!-- Quick Actions -->
-            <div class="mb-4">
-                <h3 class="text-lg font-bold text-gray-800 mb-3">Quick Actions</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            <!-- Column 2: Quick Actions & Schedule -->
+            <div class="bg-white rounded-lg shadow-md p-5">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Quick Actions</h3>
+                <div class="grid grid-cols-3 gap-2 mb-4">
                     <button onclick="controlAction('run')"
-                            class="flex items-center justify-center gap-2 bg-green-300 hover:bg-green-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            class="flex flex-col items-center justify-center gap-1 bg-green-300 hover:bg-green-400 text-gray-800 text-sm font-semibold py-3 px-2 rounded">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
-                        <span>Run Now</span>
+                        <span>Run</span>
                     </button>
                     <button onclick="controlAction('pause')"
-                            class="flex items-center justify-center gap-2 bg-yellow-300 hover:bg-yellow-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            class="flex flex-col items-center justify-center gap-1 bg-yellow-300 hover:bg-yellow-400 text-gray-800 text-sm font-semibold py-3 px-2 rounded">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
                         </svg>
                         <span>Pause</span>
                     </button>
                     <button onclick="controlAction('stop')"
-                            class="flex items-center justify-center gap-2 bg-red-300 hover:bg-red-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            class="flex flex-col items-center justify-center gap-1 bg-red-300 hover:bg-red-400 text-gray-800 text-sm font-semibold py-3 px-2 rounded">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M6 6h12v12H6z"/>
                         </svg>
                         <span>Stop</span>
                     </button>
                     <button onclick="showFilesModal()"
-                            class="flex items-center justify-center gap-2 bg-indigo-300 hover:bg-indigo-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="flex flex-col items-center justify-center gap-1 bg-indigo-300 hover:bg-indigo-400 text-gray-800 text-sm font-semibold py-3 px-2 rounded">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                         </svg>
-                        <span>View Data</span>
+                        <span>Data</span>
                     </button>
                     <button onclick="showChangesModal()"
-                            class="flex items-center justify-center gap-2 bg-teal-300 hover:bg-teal-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="flex flex-col items-center justify-center gap-1 bg-teal-300 hover:bg-teal-400 text-gray-800 text-sm font-semibold py-3 px-2 rounded">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
                         </svg>
-                        <span>View Changes</span>
+                        <span>Changes</span>
                     </button>
                     <button onclick="showNotificationsModal()"
-                            class="flex items-center justify-center gap-2 bg-purple-300 hover:bg-purple-400 text-gray-800 text-sm font-semibold py-2 px-3 rounded">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="flex flex-col items-center justify-center gap-1 bg-purple-300 hover:bg-purple-400 text-gray-800 text-sm font-semibold py-3 px-2 rounded">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
                         </svg>
-                        <span>Notifications</span>
+                        <span>Notify</span>
                     </button>
                 </div>
-            </div>
 
-            <!-- Schedule -->
-            <div class="border-t border-gray-200 pt-3">
-                <div class="flex flex-wrap items-center gap-3 text-sm">
-                    <label class="font-medium text-gray-700">Run Every:</label>
-                    <div class="flex items-center gap-2">
+                <!-- Schedule -->
+                <div class="border-t border-gray-200 pt-3">
+                    <label class="text-sm font-medium text-gray-700 block mb-2">Schedule</label>
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="text-gray-600">Every</span>
                         <input type="number" id="intervalDays" min="1" max="365" step="1" value="7"
-                               class="border border-gray-300 rounded px-2 py-1 w-16 text-sm"
+                               class="border border-gray-300 rounded px-2 py-1 w-14 text-sm"
                                onfocus="window.intervalDaysEditing = true"
                                onblur="window.intervalDaysEditing = false">
-                        <span>days</span>
+                        <span class="text-gray-600">days</span>
                         <button onclick="saveSchedule()"
-                                class="flex items-center gap-2 bg-blue-300 hover:bg-blue-400 text-gray-800 text-sm font-semibold py-1.5 px-4 rounded">
+                                class="ml-auto flex items-center gap-1 bg-blue-300 hover:bg-blue-400 text-gray-800 text-sm font-semibold py-1.5 px-3 rounded">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
                             <span>Save</span>
                         </button>
                     </div>
-                    <div class="flex items-center gap-2 ml-auto">
-                        <span class="text-gray-600">Next Run:</span>
-                        <span class="font-semibold text-gray-800" id="nextRun">-</span>
-                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3: Recent Jobs -->
+            <div class="bg-white rounded-lg shadow-md p-5">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Recent Jobs</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full compact-table">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="px-2 py-2 text-left text-sm font-semibold text-gray-700">Date</th>
+                                <th class="px-2 py-2 text-left text-sm font-semibold text-gray-700">Dur.</th>
+                                <th class="px-2 py-2 text-left text-sm font-semibold text-gray-700">Status</th>
+                                <th class="px-2 py-2 text-left text-sm font-semibold text-gray-700">Cnt</th>
+                            </tr>
+                        </thead>
+                        <tbody id="jobHistoryTable" class="divide-y divide-gray-200">
+                            <tr>
+                                <td colspan="4" class="px-2 py-3 text-center text-gray-500 text-sm">No jobs yet</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
-        <!-- Live Activity Log -->
-        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-            <div class="flex justify-between items-center mb-4">
+        <!-- Live Activity Log - Full width, compact -->
+        <div class="bg-white rounded-lg shadow-md p-5 mb-4">
+            <div class="flex justify-between items-center mb-3">
                 <h2 class="text-xl font-bold text-gray-800">Live Activity Log</h2>
                 <button onclick="clearLogs()"
                         class="px-3 py-1 bg-gray-300 hover:bg-gray-400 rounded text-sm">
@@ -386,30 +415,6 @@
 
             <div id="activityLog" class="bg-gray-50 rounded-lg p-4 space-y-1">
                 <div class="text-gray-500 text-sm">No activity yet...</div>
-            </div>
-        </div>
-
-        <!-- Recent Jobs -->
-        <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">Recent Jobs</h2>
-
-            <div class="overflow-x-auto">
-                <table class="w-full">
-                    <thead class="bg-gray-100">
-                        <tr>
-                            <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Date</th>
-                            <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Duration</th>
-                            <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Status</th>
-                            <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Count</th>
-                            <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Errors</th>
-                        </tr>
-                    </thead>
-                    <tbody id="jobHistoryTable" class="divide-y divide-gray-200">
-                        <tr>
-                            <td colspan="5" class="px-4 py-4 text-center text-gray-500">No jobs yet</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
@@ -648,11 +653,11 @@
                 }
 
                 logContainer.innerHTML = logs.slice(-20).map(log => {
-                    const time = new Date(log.timestamp).toLocaleTimeString();
+                    const time = new Date(log.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
                     const levelClass = 'log-' + (log.level || 'info');
                     const icon = log.level === 'error' ? '✗' : log.level === 'warning' ? '⚠' : '✓';
 
-                    return `<div class="log-entry ${levelClass}">${time} ${icon} ${escapeHtml(log.message)}</div>`;
+                    return `<div class="log-entry ${levelClass} text-sm">${time} ${icon} ${escapeHtml(log.message)}</div>`;
                 }).join('');
 
                 // Auto-scroll to bottom
@@ -672,22 +677,24 @@
                 const tableBody = document.getElementById('jobHistoryTable');
 
                 if (history.length === 0) {
-                    tableBody.innerHTML = '<tr><td colspan="5" class="px-4 py-4 text-center text-gray-500">No jobs yet</td></tr>';
+                    tableBody.innerHTML = '<tr><td colspan="4" class="px-2 py-3 text-center text-gray-500 text-xs">No jobs yet</td></tr>';
                     return;
                 }
 
-                tableBody.innerHTML = history.slice(-10).reverse().map(job => {
+                tableBody.innerHTML = history.slice(-5).reverse().map(job => {
                     const statusIcon = job.status === 'done' ? '✓' : job.status === 'failed' ? '✗' : '•';
                     const statusColor = job.status === 'done' ? 'text-green-600' :
                                        job.status === 'failed' ? 'text-red-600' : 'text-gray-600';
 
+                    // Format date to be more compact (MM/DD HH:MM or just HH:MM for today)
+                    const jobDate = job.date.length > 10 ? job.date.substring(5, 16) : job.date;
+
                     return `
                         <tr class="hover:bg-gray-50">
-                            <td class="px-4 py-2 text-sm">${job.date}</td>
-                            <td class="px-4 py-2 text-sm">${job.duration_formatted || job.duration + 's'}</td>
-                            <td class="px-4 py-2 text-sm ${statusColor}">${statusIcon} ${job.status}</td>
-                            <td class="px-4 py-2 text-sm">${job.count || 0}</td>
-                            <td class="px-4 py-2 text-sm">${job.errors || 0}</td>
+                            <td class="px-2 py-2 text-sm">${jobDate}</td>
+                            <td class="px-2 py-2 text-sm">${job.duration_formatted || job.duration + 's'}</td>
+                            <td class="px-2 py-2 text-sm ${statusColor}">${statusIcon}</td>
+                            <td class="px-2 py-2 text-sm">${job.count || 0}</td>
                         </tr>
                     `;
                 }).join('');
