@@ -115,12 +115,14 @@ def send_ntfy_notification(config: Dict, title: str, message: str, priority: int
     """
     try:
         if not config.get('enabled'):
+            print(f"ntfy notification skipped: not enabled")
             return False
 
         server_url = config.get('server_url', 'https://ntfy.sh')
         topic = config.get('topic')
 
         if not topic:
+            print(f"ntfy notification failed: no topic configured")
             return False
 
         # Construct the full URL
@@ -138,11 +140,18 @@ def send_ntfy_notification(config: Dict, title: str, message: str, priority: int
         if attach_url:
             headers['Attach'] = attach_url
 
+        print(f"Sending ntfy notification to {url}")
+        print(f"Headers: {headers}")
+
         # Send the notification
         response = requests.post(url, data=message.encode('utf-8'), headers=headers, timeout=10)
+        print(f"ntfy response status: {response.status_code}")
+        print(f"ntfy response text: {response.text}")
         return response.status_code == 200
     except Exception as e:
         print(f"ntfy notification failed: {e}")
+        import traceback
+        traceback.print_exc()
         return False
 
 

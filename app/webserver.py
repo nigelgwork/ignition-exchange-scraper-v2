@@ -7,8 +7,12 @@ from pathlib import Path
 import json
 import threading
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from typing import Dict, List
 import os
+
+# Adelaide timezone
+ADELAIDE_TZ = ZoneInfo("Australia/Adelaide")
 
 app = Flask(__name__, static_folder='static')
 CORS(app)
@@ -116,7 +120,7 @@ def get_logs(limit: int = 100) -> List[Dict]:
 def append_log(message: str, level: str = 'info'):
     """Append log entry to file"""
     log_entry = {
-        'timestamp': datetime.now().isoformat(),
+        'timestamp': datetime.now(ADELAIDE_TZ).isoformat(),
         'message': message,
         'level': level
     }

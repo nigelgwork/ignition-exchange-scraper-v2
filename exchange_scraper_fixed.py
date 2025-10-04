@@ -7,7 +7,11 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from typing import Callable, Optional, Dict, List
+
+# Adelaide timezone
+ADELAIDE_TZ = ZoneInfo("Australia/Adelaide")
 
 BASE_URL = "https://inductiveautomation.com/exchange/"
 OUTPUT_FILE = Path("all_exchange_resources.json")
@@ -46,7 +50,7 @@ class ScraperEngine:
                 "type": "log",
                 "message": message,
                 "level": level,
-                "timestamp": datetime.now().isoformat()
+                "timestamp": datetime.now(ADELAIDE_TZ).isoformat()
             })
         print(message)
 
@@ -58,7 +62,7 @@ class ScraperEngine:
                 "current": current,
                 "total": total,
                 "current_item": current_item,
-                "timestamp": datetime.now().isoformat()
+                "timestamp": datetime.now(ADELAIDE_TZ).isoformat()
             })
 
     def stop(self):

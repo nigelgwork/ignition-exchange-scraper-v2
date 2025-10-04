@@ -8,8 +8,12 @@ import time
 import threading
 from pathlib import Path
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
+
+# Adelaide timezone
+ADELAIDE_TZ = ZoneInfo("Australia/Adelaide")
 
 # Add parent directory to path so we can import exchange_scraper_fixed
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -40,7 +44,7 @@ scraper_lock = threading.Lock()
 def append_log(message: str, level: str = 'info'):
     """Append log entry to file"""
     log_entry = {
-        'timestamp': datetime.now().isoformat(),
+        'timestamp': datetime.now(ADELAIDE_TZ).isoformat(),
         'message': message,
         'level': level
     }
@@ -159,7 +163,7 @@ def progress_callback(data: dict):
         # Update elapsed and estimated time
         if state['current_job'] and state['current_job'].get('start_time'):
             start_time = datetime.fromisoformat(state['current_job']['start_time'])
-            elapsed = (datetime.now() - start_time).total_seconds()
+            elapsed = (datetime.now(ADELAIDE_TZ) - start_time).total_seconds()
             state['elapsed_seconds'] = int(elapsed)
 
             # Estimate remaining time
@@ -180,7 +184,7 @@ def run_scraper_job():
     state = load_state()
     state['status'] = 'running'
     state['current_job'] = {
-        'start_time': datetime.now().isoformat(),
+        'start_time': datetime.now(ADELAIDE_TZ).isoformat(),
         'errors': 0
     }
     state['progress'] = {'current': 0, 'total': 0, 'percentage': 0, 'current_item': 'Initializing...'}
@@ -188,7 +192,7 @@ def run_scraper_job():
     state['estimated_remaining_seconds'] = 0
     save_state(state)
 
-    job_start = datetime.now()
+    job_start = datetime.now(ADELAIDE_TZ)
     errors = 0
     current_results = []
 
@@ -244,7 +248,7 @@ def run_scraper_job():
                 config.get('notifications'),
                 stats,
                 output_path,
-                updated_resources  # Pass the updated resources for detailed email
+                updated_results  # Pass the updated resources for detailed notification
             )
             for channel, success in notif_results.items():
                 if success:
@@ -253,7 +257,7 @@ def run_scraper_job():
                     append_log(f'  ✗ {channel.capitalize()} notification failed', 'warning')
 
         # Update job history
-        job_end = datetime.now()
+        job_end = datetime.now(ADELAIDE_TZ)
         duration = (job_end - job_start).total_seconds()
 
         history = load_job_history()
@@ -276,7 +280,7 @@ def run_scraper_job():
         errors += 1
 
         # Update job history with error
-        job_end = datetime.now()
+        job_end = datetime.now(ADELAIDE_TZ)
         duration = (job_end - job_start).total_seconds()
 
         history = load_job_history()
@@ -295,13 +299,13 @@ def run_scraper_job():
         # Update state
         state = load_state()
         state['status'] = 'done' if errors == 0 else 'failed'
-        state['last_run'] = datetime.now().isoformat()
+        state['last_run'] = datetime.now(ADELAIDE_TZ).isoformat()
         state['current_job'] = None
         state['progress'] = {'current': 0, 'total': 0, 'percentage': 0, 'current_item': ''}
 
         # Calculate next run
         config = load_config()
-        next_run = datetime.now() + timedelta(days=config.get('interval_days', 7))
+        next_run = datetime.now(ADELAIDE_TZ) + timedelta(days=config.get('interval_days', 7))
         state['next_run'] = next_run.isoformat()
 
         save_state(state)
@@ -374,12 +378,12 @@ def main():
     append_log(f'Configuration: interval={interval_days} days, enabled={config["enabled"]}')
 
     # Calculate next run
-    next_run = datetime.now() + timedelta(days=interval_days)
+    next_run = datetime.now(ADELAIDE_TZ) + timedelta(days=interval_days)
     state['next_run'] = next_run.isoformat()
     save_state(state)
 
     # Start scheduler
-    scheduler = BackgroundScheduler()
+    scheduler = BackgroundScheduler(timezone=ADELAIDE_TZ)
 
     # Add job with interval trigger (convert days to hours for APScheduler)
     scheduler.add_job(
@@ -418,7 +422,7 @@ def main():
 
                 # Update next run time
                 state = load_state()
-                next_run = datetime.now() + timedelta(days=new_interval_days)
+                next_run = datetime.now(ADELAIDE_TZ) + timedelta(days=new_interval_days)
                 state['next_run'] = next_run.isoformat()
                 save_state(state)
 

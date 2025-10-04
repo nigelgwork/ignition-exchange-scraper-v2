@@ -7,7 +7,11 @@ from openpyxl.utils import get_column_letter
 from typing import List, Dict
 from pathlib import Path
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import re
+
+# Adelaide timezone
+ADELAIDE_TZ = ZoneInfo("Australia/Adelaide")
 
 
 def extract_resource_id(url: str) -> int:
@@ -156,7 +160,7 @@ def generate_filename(date: datetime = None) -> str:
         Filename in format: Ignition Exchange Resource Results_YYMMDD.xlsx
     """
     if date is None:
-        date = datetime.now()
+        date = datetime.now(ADELAIDE_TZ)
 
     date_str = date.strftime('%y%m%d')
     return f"Ignition Exchange Resource Results_{date_str}.xlsx"
