@@ -37,7 +37,9 @@ env/
 Thumbs.db
 
 # Data and logs
-data/
+data/*
+!data/output/
+data/output/*
 !data/output/*.xlsx
 *.log
 
